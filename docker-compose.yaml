@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend
+    build: .
+    image: ghcr.io/valuable-promo/frontend:dev
+    command: npm run dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app
