@@ -4,6 +4,7 @@ import { createContext } from 'react';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
+import '@/styles/globals.css';
 // types
 import type { AppProps, AppContext } from 'next/app';
 import type StrapiGlobal from '@/types/strapi-global';
