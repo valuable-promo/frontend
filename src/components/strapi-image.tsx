@@ -4,14 +4,15 @@ import { getStrapiMedia } from '@/lib/media';
 // types
 import StrapiMedia from '@/types/strapi-media';
 
-type ImageProps = {
+type StrapiImageProps = {
   priority?: boolean;
+  classes?: string;
   image: {
     data: StrapiMedia;
   };
 };
 
-const Image: React.FC<ImageProps> = ({ priority, image }) => {
+const StrapiImage: React.FC<StrapiImageProps> = ({ priority, image, classes }) => {
   const { alternativeText, width, height } = image.data.attributes;
 
   return (
@@ -23,8 +24,9 @@ const Image: React.FC<ImageProps> = ({ priority, image }) => {
       // objectFit="contain"
       src={getStrapiMedia(image.data)}
       alt={alternativeText || ''}
+      className={classes}
     />
   );
 };
 
-export default Image;
+export default StrapiImage;

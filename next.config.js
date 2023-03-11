@@ -9,20 +9,6 @@ const nextConfig = {
       'valuable-promo-headless-dev.s3.nl-ams.scw.cloud',
       'valuable-promo-headless-prod.s3.nl-ams.scw.cloud',
     ],
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'valuable-promo-headless-dev.s3.nl-ams.scw.cloud',
-    //     port: '',
-    //     pathname: '**',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'valuable-promo-headless-prod.s3.nl-ams.scw.cloud',
-    //     port: '',
-    //     pathname: '**',
-    //   },
-    // ],
   },
 };
 

@@ -1,3 +1,4 @@
+import StrapiCategory from './strapi-category';
 import StrapiMedia from './strapi-media';
 
 type StrapiArticle = {
@@ -12,6 +13,9 @@ type StrapiArticle = {
     publishedAt: string;
     image: {
       data: StrapiMedia;
+    };
+    categories: {
+      data: StrapiCategory[];
     };
   };
 };

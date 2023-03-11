@@ -1,17 +1,17 @@
 import React, { ReactNode } from 'react';
-
-// type SeoProps = {
-//   title: string;
-//   description: string;
-//   image: string;
-// };
+import Footer from './footer';
 
 type LayoutProps = {
   children: ReactNode;
-  // categories: Category[];
-  // seo: SeoProps;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => <>{children}</>;
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <>
+      {children}
+      <Footer />
+    </>
+  );
+};
 
 export default Layout;
