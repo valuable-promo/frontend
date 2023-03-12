@@ -2,18 +2,20 @@ import NextImage from 'next/image';
 // local
 import { getStrapiMedia } from '@/lib/media';
 // types
-import StrapiMedia from '@/types/strapi-media';
+import { StrapiMedia, StrapiMediaFormat } from '@/types/strapi-media';
 
 type StrapiImageProps = {
   priority?: boolean;
   classes?: string;
+  fortmat?: StrapiMediaFormat;
   image: {
     data: StrapiMedia;
   };
 };
 
-const StrapiImage: React.FC<StrapiImageProps> = ({ priority, image, classes }) => {
-  const { alternativeText, width, height } = image.data.attributes;
+const StrapiImage: React.FC<StrapiImageProps> = ({ priority, image, fortmat, classes }) => {
+  const { alternativeText } = image.data.attributes;
+  const { url, width, height } = getStrapiMedia(image.data, fortmat);
 
   return (
     <NextImage
@@ -22,7 +24,7 @@ const StrapiImage: React.FC<StrapiImageProps> = ({ priority, image, classes }) =
       width={width}
       height={height}
       // objectFit="contain"
-      src={getStrapiMedia(image.data)}
+      src={url}
       alt={alternativeText || ''}
       className={classes}
     />

@@ -7,7 +7,7 @@ import Layout from '@/components/layout';
 import { fetchAPI } from '../../lib/api';
 import { getStrapiMedia } from '../../lib/media';
 // types
-import StrapiArticle from '@/types/strapi-article';
+import StrapiArticle from '@/types/article';
 
 interface ArticleProps {
   article: StrapiArticle;

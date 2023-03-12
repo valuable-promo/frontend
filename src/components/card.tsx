@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 // local
 import StrapiImage from '@/components/strapi-image';
 // types
-import Article from '@/types/strapi-article';
+import Article from '@/types/article';
 
 type CardProps = {
   article: Article;
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
               return (
                 <span
                   key={`category__${category.attributes.slug}`}
-                  className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100 mr-2"
+                  className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100 mr-2 last:mr-0"
                 >
                   {category.attributes.name}
                 </span>
@@ -51,6 +51,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
                   <StrapiImage
                     key={author.id}
                     image={author.attributes.avatar}
+                    fortmat="thumbnail"
                     classes={`relative z-30 inline-block rounded-full ring-2 ring-white ${avatarSize}`}
                   />
                 );

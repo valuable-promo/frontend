@@ -7,7 +7,7 @@ type StrapiMedia = {
     width: number;
     height: number;
     formats: {
-      small: {
+      large?: {
         ext: string;
         url: string;
         hash: string;
@@ -18,7 +18,29 @@ type StrapiMedia = {
         width: number;
         height: number;
       };
-      thumbnail: {
+      medium?: {
+        ext: string;
+        url: string;
+        hash: string;
+        mime: string;
+        name: string;
+        path: null;
+        size: number;
+        width: number;
+        height: number;
+      };
+      small?: {
+        ext: string;
+        url: string;
+        hash: string;
+        mime: string;
+        name: string;
+        path: null;
+        size: number;
+        width: number;
+        height: number;
+      };
+      thumbnail?: {
         ext: string;
         url: string;
         hash: string;
@@ -43,4 +65,6 @@ type StrapiMedia = {
   };
 };
 
-export default StrapiMedia;
+type StrapiMediaFormat = 'thumbnail' | 'small' | 'medium' | 'large';
+
+export type { StrapiMedia, StrapiMediaFormat };
