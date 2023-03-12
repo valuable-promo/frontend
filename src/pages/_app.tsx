@@ -21,10 +21,11 @@ interface MyAppProps {
 
 const MyApp = ({ Component, pageProps }: MyAppProps) => {
   const { global } = pageProps;
+  const favicon = getStrapiMedia(global.attributes.favicon.data);
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href={getStrapiMedia(global.attributes.favicon.data)} />
+        <link rel="shortcut icon" href={favicon.url} />
       </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
