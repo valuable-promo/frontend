@@ -43,7 +43,9 @@ const Home: React.FC<HomeProps> = ({ articles }) => {
 export async function getStaticProps() {
   // Run API calls in parallel
   const [articlesRes] = await Promise.all([
-    fetchAPI<StrapiArticle[]>('/articles', { populate: ['image', 'categories'] }),
+    fetchAPI<StrapiArticle[]>('/articles', {
+      populate: ['image', 'categories', 'authors.avatar'],
+    }),
   ]);
 
   return {

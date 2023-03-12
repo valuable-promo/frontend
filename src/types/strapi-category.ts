@@ -1,7 +1,7 @@
 type StrapiCategory = {
   id: number;
   attributes: {
-    title: string;
+    name: string;
     slug: string;
     description: string;
     createdAt: string;
