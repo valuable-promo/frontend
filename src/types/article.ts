@@ -1,8 +1,8 @@
 import Author from './author';
-import StrapiCategory from './strapi-category';
+import Category from './category';
 import StrapiMedia from './strapi-media';
 
-type StrapiArticle = {
+type Article = {
   id: number;
   attributes: {
     title: string;
@@ -16,7 +16,7 @@ type StrapiArticle = {
       data: StrapiMedia;
     };
     categories: {
-      data: StrapiCategory[];
+      data: Category[];
     };
     authors: {
       data: Author[];
@@ -24,4 +24,4 @@ type StrapiArticle = {
   };
 };
 
-export default StrapiArticle;
+export default Article;

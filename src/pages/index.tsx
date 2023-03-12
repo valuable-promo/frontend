@@ -1,16 +1,14 @@
 import React from 'react';
-import NextImage from 'next/image';
 // local
-import Articles from '@/components/articles';
 import Layout from '@/components/layout';
 import Seo from '@/components/seo';
+import Card from '@/components/card';
 import { fetchAPI } from '@/lib/api';
 // types
-import type StrapiArticle from '@/types/strapi-article';
-import Card from '@/components/card';
+import type Article from '@/types/article';
 
 type HomeProps = {
-  articles: StrapiArticle[];
+  articles: Article[];
 };
 
 const Home: React.FC<HomeProps> = ({ articles }) => {
@@ -43,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ articles }) => {
 export async function getStaticProps() {
   // Run API calls in parallel
   const [articlesRes] = await Promise.all([
-    fetchAPI<StrapiArticle[]>('/articles', {
+    fetchAPI<Article[]>('/articles', {
       populate: ['image', 'categories', 'authors.avatar'],
     }),
   ]);
