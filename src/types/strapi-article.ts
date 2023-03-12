@@ -1,3 +1,4 @@
+import Author from './author';
 import StrapiCategory from './strapi-category';
 import StrapiMedia from './strapi-media';
 
@@ -16,6 +17,9 @@ type StrapiArticle = {
     };
     categories: {
       data: StrapiCategory[];
+    };
+    authors: {
+      data: Author[];
     };
   };
 };
