@@ -5,16 +5,17 @@ import { GetStaticProps } from 'next';
 import Seo from '@/components/seo';
 import Layout from '@/components/layout';
 import { fetchAPI } from '../../lib/api';
-import { getStrapiMedia } from '../../lib/media';
 // types
 import StrapiArticle from '@/types/article';
+import StrapiImage from '@/components/strapi-image';
 
 interface ArticleProps {
   article: StrapiArticle;
 }
 
 const Article: React.FC<ArticleProps> = ({ article }) => {
-  const imageUrl = getStrapiMedia(article.attributes.image.data);
+  const post = article.attributes;
+  const authors = article.attributes.authors.data;
 
   const seo = {
     metaTitle: article.attributes.title,
@@ -26,20 +27,50 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
   return (
     <Layout>
       <Seo seo={seo} />
-      <div id="" className="" data-src={imageUrl} data-srcset={imageUrl} data-uk-img>
-        <h1>{article.attributes.title}</h1>
-      </div>
+
       <div className="">
-        <div className="">
-          <ReactMarkdown>{article.attributes.content}</ReactMarkdown>
-          <hr className="" />
-          <div className="" data-uk-grid="true">
-            <div className="">
-              <p className="">By VP</p>
-              <p className="">
-                <Moment format="MMM Do YYYY">{article.attributes.publishedAt}</Moment>
-              </p>
+        <div className="bg-white py-32 px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {article.attributes.title}
+            </h1>
+            <div>
+              <div className="mt-6 flex items-center">
+                <div className="flex-shrink-0">
+                  <div className="isolate flex -space-x-1 overflow-hidden">
+                    {authors.map((author) => {
+                      return (
+                        <StrapiImage
+                          key={author.id}
+                          image={author.attributes.avatar}
+                          fortmat="thumbnail"
+                          classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-gray-900">
+                    {authors.map((author, i) => {
+                      return (
+                        <span key={author.id}>
+                          {i > 0 ? ', ' : ''}
+                          {author.attributes.name}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  <div className="flex space-x-1 text-sm text-gray-500">
+                    <time dateTime={post.publishedAt}>
+                      <Moment format="MMM Do YYYY">{post.publishedAt}</Moment>
+                    </time>
+                  </div>
+                </div>
+              </div>
             </div>
+            <ReactMarkdown className="mt-6 text-xl leading-8">{article.attributes.content}</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -72,7 +103,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) 
     filters: {
       slug: params!.slug,
     },
-    populate: ['image'],
+    populate: ['image', 'authors.avatar'],
   });
 
   return {
