@@ -16,7 +16,7 @@ jobs:
 
   deploy:
     needs: build
-    uses: valuable-promo/infra/.github/workflows/deploy-staging.yaml
+    uses: valuable-promo/infra/.github/workflows/deploy-staging.yaml@main
     with:
       namespace: valuable-promo-staging
       deployment: headless-depl
