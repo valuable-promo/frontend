@@ -70,7 +70,7 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
                 </div>
               </div>
             </div>
-            <ReactMarkdown className="mt-6 text-xl leading-8">{article.attributes.content}</ReactMarkdown>
+            <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{article.attributes.content}</ReactMarkdown>
           </div>
         </div>
       </div>

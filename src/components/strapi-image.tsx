@@ -2,14 +2,14 @@ import NextImage from 'next/image';
 // local
 import { getStrapiMedia } from '@/lib/media';
 // types
-import { StrapiMedia, StrapiMediaFormat } from '@/types/strapi-media';
+import { Image, ImageFormat } from '@/types/media';
 
 type StrapiImageProps = {
   priority?: boolean;
   classes?: string;
-  fortmat?: StrapiMediaFormat;
+  fortmat?: ImageFormat;
   image: {
-    data: StrapiMedia;
+    data: Image;
   };
 };
 

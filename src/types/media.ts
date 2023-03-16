@@ -1,4 +1,4 @@
-type StrapiMedia = {
+type Image = {
   id: number;
   attributes: {
     name: string;
@@ -65,6 +65,6 @@ type StrapiMedia = {
   };
 };
 
-type StrapiMediaFormat = 'thumbnail' | 'small' | 'medium' | 'large';
+type ImageFormat = 'thumbnail' | 'small' | 'medium' | 'large';
 
-export type { StrapiMedia, StrapiMediaFormat };
+export type { Image, ImageFormat };
