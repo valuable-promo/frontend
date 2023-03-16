@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/valuable-promo/frontend/compare/v0.1.1...v0.1.2) (2023-03-16)
+
+
+### Features
+
+* adds markdown css ([b6bdbe4](https://github.com/valuable-promo/frontend/commit/b6bdbe4b3ec12371a7eb2390301561f1908efceb))
+
 ### [0.1.1](https://github.com/valuable-promo/frontend/compare/v0.1.0...v0.1.1) (2023-03-16)
 
 
