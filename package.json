@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "release": "npx standard-version && git push --follow-tags origin main"
   },
   "dependencies": {
     "@next/font": "13.2.4",
