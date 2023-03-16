@@ -8,7 +8,7 @@ on:
       - 'docker-compose.yml'
 jobs:
   build:
-    uses: valuable-promo/infra/.github/workflows/build-staging.yml@main
+    uses: valuable-promo/infra/.github/workflows/build-staging.yaml@main
     with:
       username: ${{ github.actor }}
       build-args: |
