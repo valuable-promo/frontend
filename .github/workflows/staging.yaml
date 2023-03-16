@@ -1,14 +1,11 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Staging
 
 on:
   push:
     branches: [main]
     paths-ignore:
-      - "**/**.md"
-      - "docker-compose.yml"
+      - '**/**.md'
+      - 'docker-compose.yml'
 jobs:
   build:
     uses: powerkernel/actions-workflows/.github/workflows/build-staging.yml@main
@@ -16,3 +13,12 @@ jobs:
       username: ${{ github.actor }}
     secrets:
       PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs: build
+    uses: valuable-promo/infra/.github/workflows/deploy-staging.yaml
+    with:
+      namespace: valuable-promo-staging
+      deployment: headless-depl
+    secrets:
+      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}

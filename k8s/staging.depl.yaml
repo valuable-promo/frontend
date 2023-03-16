@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-depl
+  namespace: valuable-promo-staging
+  annotations:
+    reloader.stakater.com/auto: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-depl
+  template:
+    metadata:
+      labels:
+        app: frontend-depl
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/valuable-promo/frontend:main
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: frontend-env
