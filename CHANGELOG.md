@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/valuable-promo/frontend/compare/v0.1.0...v0.1.1) (2023-03-16)
+
+
+### Features
+
+* adds favicon images ([ebba6d4](https://github.com/valuable-promo/frontend/commit/ebba6d4749aaccb4ceae4eada379c4289773a95d))
+
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v5 ([6a4d723](https://github.com/valuable-promo/frontend/commit/6a4d723457fa55cb83b9dbf80995922edbd0a562))
+* tagging prod image ([ee2e70a](https://github.com/valuable-promo/frontend/commit/ee2e70a3b651867c577cc45dc2cad1aeacbb6a27))
+
 ## 0.1.0 (2023-03-16)
 
 
