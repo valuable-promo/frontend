@@ -26,6 +26,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/qs": "^6.9.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
