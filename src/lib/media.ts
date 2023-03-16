@@ -1,7 +1,7 @@
 // local
 import { getStrapiURL } from './api';
 // types
-import { StrapiMedia, StrapiMediaFormat } from '@/types/strapi-media';
+import { StrapiMedia, StrapiMediaFormat } from '@/types/media';
 
 /**
  * Get full Strapi Media URL from a Strapi Media object

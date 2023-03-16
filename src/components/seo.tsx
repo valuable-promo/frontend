@@ -2,13 +2,13 @@ import Head from 'next/head';
 import { useContext } from 'react';
 import { GlobalContext } from '../pages/_app';
 import { getStrapiMedia } from '../lib/media';
-import StrapiMedia from '@/types/strapi-media';
+import { Image } from '@/types/media';
 
 type SeoProps = {
   seo: {
     metaTitle?: string;
     metaDescription?: string;
-    shareImage?: { data: StrapiMedia };
+    shareImage?: { data: Image };
     article: boolean;
   };
 };
@@ -16,7 +16,7 @@ type SeoProps = {
 const Seo: React.FC<SeoProps> = ({ seo }) => {
   const global = useContext(GlobalContext);
   const siteName = global?.attributes?.siteName ?? '';
-  const defaultSeo = global?.attributes.defaultSeo ?? {};
+  const defaultSeo = global?.attributes.seo ?? {};
 
   const seoWithDefaults = {
     ...defaultSeo,
@@ -25,7 +25,7 @@ const Seo: React.FC<SeoProps> = ({ seo }) => {
   const fullSeo = {
     ...seoWithDefaults,
     // Add title suffix
-    metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
+    metaTitle: seoWithDefaults.metaTitle === siteName ? siteName : `${seoWithDefaults.metaTitle} | ${siteName}`,
     // Get full image URL
     shareImage: seoWithDefaults.shareImage ? getStrapiMedia(seoWithDefaults.shareImage.data) : null,
   };
@@ -49,9 +49,9 @@ const Seo: React.FC<SeoProps> = ({ seo }) => {
       )}
       {fullSeo.shareImage && (
         <>
-          <meta property="og:image" content={fullSeo.shareImage} />
-          <meta name="twitter:image" content={fullSeo.shareImage} />
-          <meta name="image" content={fullSeo.shareImage} />
+          <meta property="og:image" content={fullSeo.shareImage.url} />
+          <meta name="twitter:image" content={fullSeo.shareImage.url} />
+          <meta name="image" content={fullSeo.shareImage.url} />
         </>
       )}
       {fullSeo.article && <meta property="og:type" content="article" />}

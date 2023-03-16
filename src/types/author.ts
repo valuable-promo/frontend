@@ -1,11 +1,11 @@
-import StrapiMedia from './strapi-media';
+import { Image } from './media';
 
 type Author = {
   id: number;
   attributes: {
     name: string;
     avatar: {
-      data: StrapiMedia;
+      data: Image;
     };
   };
 };

@@ -1,6 +1,6 @@
 import Author from './author';
 import Category from './category';
-import StrapiMedia from './strapi-media';
+import { Image } from './media';
 
 type Article = {
   id: number;
@@ -13,7 +13,7 @@ type Article = {
     updatedAt: string;
     publishedAt: string;
     image: {
-      data: StrapiMedia;
+      data: Image;
     };
     categories: {
       data: Category[];
