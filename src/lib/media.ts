@@ -1,13 +1,13 @@
 // local
 import { getStrapiURL } from './api';
 // types
-import { StrapiMedia, StrapiMediaFormat } from '@/types/media';
+import { Image, ImageFormat } from '@/types/media';
 
 /**
  * Get full Strapi Media URL from a Strapi Media object
  * @param {StrapiMedia} media Strapi Media Object
  */
-const getStrapiMedia = (media: StrapiMedia, format?: StrapiMediaFormat) => {
+const getStrapiMedia = (media: Image, format?: ImageFormat) => {
   const { url } = media.attributes;
   if (format && media.attributes.formats[format]) {
     return {
