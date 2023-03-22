@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useContext } from 'react';
-import { GlobalContext } from '../pages/_app';
 import { getStrapiMedia } from '../lib/media';
 import { Image } from '@/types/media';
 
@@ -14,9 +13,8 @@ type SeoProps = {
 };
 
 const Seo: React.FC<SeoProps> = ({ seo }) => {
-  const global = useContext(GlobalContext);
-  const siteName = global?.attributes?.siteName ?? '';
-  const defaultSeo = global?.attributes.seo ?? {};
+  const siteName = 'Valuable Promp';
+  const defaultSeo = {};
 
   const seoWithDefaults = {
     ...defaultSeo,

@@ -4,7 +4,6 @@ import Layout from '@/components/layout';
 import Seo from '@/components/seo';
 import Card from '@/components/card';
 import { fetchAPI } from '@/lib/api';
-import { GlobalContext } from '@/pages/_app';
 // types
 import type Article from '@/types/article';
 
@@ -13,13 +12,12 @@ type HomeProps = {
 };
 
 const Home: React.FC<HomeProps> = ({ articles }) => {
-  const global = useContext(GlobalContext);
   return (
     <Layout>
       <Seo
         seo={{
-          metaTitle: global?.attributes.siteName,
-          metaDescription: global?.attributes.seo.metaDescription,
+          metaTitle: 'Home',
+          metaDescription: 'Valuable Promo',
           article: false,
         }}
       />
@@ -30,10 +28,8 @@ const Home: React.FC<HomeProps> = ({ articles }) => {
         </div>
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {global?.attributes.siteName}
-            </h2>
-            <p>{global?.attributes.slogan}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Home</h2>
+            <p>Slogin</p>
           </div>
           <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {articles.map((article, i) => {
