@@ -5,6 +5,9 @@ services:
     build: .
     image: ghcr.io/valuable-promo/frontend:dev
     command: npm run dev
+    # docker compose run --rm frontend npm run build
+    env_file:
+      - .env.local
     ports:
       - '3000:3000'
     volumes:
