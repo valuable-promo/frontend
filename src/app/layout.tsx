@@ -4,8 +4,8 @@ import '@/styles/globals.css';
 
 export const metadata = {
   title: {
-    default: process.env.SITE_TITLE,
-    template: `%s | ${process.env.SITE_TITLE}`,
+    default: process.env.SITE_NAME,
+    template: `%s | ${process.env.SITE_NAME}`,
   },
 };
 
