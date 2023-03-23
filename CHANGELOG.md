@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/valuable-promo/frontend/compare/v0.1.2...v0.1.3) (2023-03-23)
+
+
+### Features
+
+* adds sharp for Image Optimization in production mode ([c3a927e](https://github.com/valuable-promo/frontend/commit/c3a927e3ce2abf892b5e208c700b09fafbd3fb41))
+* loads site name from strapi ([3c643df](https://github.com/valuable-promo/frontend/commit/3c643df60c54de4860fc72971abb576fd1b5cbcd))
+* uses app dir and built-in SEO ([c4f378d](https://github.com/valuable-promo/frontend/commit/c4f378db4a23970becfc64b8b1ed809dcaf83304))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.15.5 ([e446a82](https://github.com/valuable-promo/frontend/commit/e446a8205c2636c428ac4fc9cba62204c80f0561))
+* incorrect env name ([293839e](https://github.com/valuable-promo/frontend/commit/293839e4f39289e9d099175423cb67a344e4a444))
+
 ### [0.1.2](https://github.com/valuable-promo/frontend/compare/v0.1.1...v0.1.2) (2023-03-16)
 
 
