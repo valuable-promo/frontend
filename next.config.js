@@ -5,6 +5,9 @@ const nextConfig = {
     loader: 'default',
     domains: ['localhost', 'host.docker.internal', process.env.NEXT_PUBLIC_STORAGE_HOST],
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

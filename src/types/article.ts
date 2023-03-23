@@ -1,6 +1,7 @@
-import Author from './author';
-import Category from './category';
-import { Image } from './media';
+import type Author from './author';
+import type Category from './category';
+import type { Image } from './media';
+import type Seo from './seo';
 
 type Article = {
   id: number;
@@ -21,6 +22,7 @@ type Article = {
     authors: {
       data: Author[];
     };
+    seo: Seo;
   };
 };
 

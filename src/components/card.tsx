@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Moment from 'react-moment';
+import moment from 'moment';
 // local
 import StrapiImage from '@/components/strapi-image';
 // types
-import Article from '@/types/article';
+import type Article from '@/types/article';
 
 type CardProps = {
   article: Article;
@@ -71,9 +71,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
               })}
             </p>
             <div className="flex space-x-1 text-sm text-gray-500">
-              <time dateTime={post.publishedAt}>
-                <Moment format="MMM Do YYYY">{post.publishedAt}</Moment>
-              </time>
+              <time dateTime={post.publishedAt}>{moment(post.publishedAt).format('MMM Do YYYY')}</time>
             </div>
           </div>
         </div>
