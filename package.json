@@ -10,18 +10,20 @@
     "release": "npx standard-version && git push --follow-tags origin main"
   },
   "dependencies": {
+    "@headlessui/react": "1.7.13",
+    "@heroicons/react": "2.0.16",
     "@types/node": "18.15.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
-    "moment": "^2.29.4",
+    "moment": "2.29.4",
     "next": "13.2.4",
-    "qs": "^6.11.0",
+    "qs": "6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "^8.0.5",
-    "sharp": "^0.31.3",
+    "react-markdown": "8.0.5",
+    "sharp": "0.31.3",
     "typescript": "5.0.2"
   },
   "devDependencies": {
