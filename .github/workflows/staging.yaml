@@ -35,7 +35,6 @@ jobs:
           build-args: |
             NEXT_PUBLIC_STRAPI_API_URL=${{ vars.NEXT_PUBLIC_STRAPI_API_URL }}
             NEXT_PUBLIC_STORAGE_HOST=${{ vars.NEXT_PUBLIC_STORAGE_HOST }}
-            SITE_NAME=${{ vars.SITE_NAME }}
           platforms: linux/arm64,linux/amd64
           push: true
           tags: ghcr.io/${{github.repository}}:main
