@@ -1,4 +1,7 @@
-import { SVGProps, useContext } from 'react';
+import { SVGProps } from 'react';
+
+// types
+import type Global from '@/types/global';
 
 const navigation = [
   {
@@ -64,7 +67,7 @@ const navigation = [
   },
 ];
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ global: Global }> = ({ global }) => {
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -78,7 +81,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-gray-500">
-            &copy; {new Date().getFullYear()} Valuable Promo. All rights reserved.
+            &copy; {new Date().getFullYear()} {global.attributes.siteName}. All rights reserved.
           </p>
         </div>
       </div>
