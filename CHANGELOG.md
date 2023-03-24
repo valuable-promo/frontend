@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/valuable-promo/frontend/compare/v0.1.3...v0.1.4) (2023-03-24)
+
+
+### Features
+
+* adds header ([2335b6b](https://github.com/valuable-promo/frontend/commit/2335b6b60682ad0ad3009aa0a09ab037abb08b71))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.15.6 ([0cdc5ea](https://github.com/valuable-promo/frontend/commit/0cdc5ea0196f8be0d011897f6fcc0298559d2240))
+* **deps:** update dependency @types/node to v18.15.7 ([3a937bc](https://github.com/valuable-promo/frontend/commit/3a937bc012fbb22329345324d19d2465b8781d04))
+* **deps:** update dependency qs to v6.11.1 ([767a59c](https://github.com/valuable-promo/frontend/commit/767a59c874386274d3d7a19ae47538449988b16a))
+* **deps:** update dependency react-markdown to v8.0.6 ([d945c00](https://github.com/valuable-promo/frontend/commit/d945c00f3c558e10919d829f68f005f5878231d6))
+
 ### [0.1.3](https://github.com/valuable-promo/frontend/compare/v0.1.2...v0.1.3) (2023-03-23)
 
 
