@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/valuable-promo/frontend/compare/v0.1.6...v0.1.7) (2023-03-30)
+
+
+### Features
+
+* adds page & improve footer ([510a85d](https://github.com/valuable-promo/frontend/commit/510a85dcc53eb398228fcbd97a483395106cd588))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.15.11 ([650bbe3](https://github.com/valuable-promo/frontend/commit/650bbe37d50f16e4d1fa42b046b77eb288b57303))
+* **deps:** update dependency @types/react to v18.0.31 ([c3bbb03](https://github.com/valuable-promo/frontend/commit/c3bbb03d32489df8fbdd784ed9afce21af003b3e))
+* **deps:** update dependency eslint to v8.37.0 ([457b100](https://github.com/valuable-promo/frontend/commit/457b100e581e2a9887f7fbf80d15265e0822e496))
+* typo type ([3c2395b](https://github.com/valuable-promo/frontend/commit/3c2395b265f7fe428f1345e20c7bdc4d0a228b09))
+
 ### [0.1.6](https://github.com/valuable-promo/frontend/compare/v0.1.5...v0.1.6) (2023-03-25)
 
 ### [0.1.5](https://github.com/valuable-promo/frontend/compare/v0.1.4...v0.1.5) (2023-03-25)
