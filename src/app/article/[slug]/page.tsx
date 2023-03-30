@@ -3,9 +3,9 @@ import ReactMarkdown from 'react-markdown';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
-import StrapiImage from '@/components/strapi-image';
+import StrapiImage from '@/components/image';
 // types
-import type Article from '@/types/article';
+import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -14,26 +14,26 @@ interface PageProps {
   };
 }
 
-async function getArticle(slug: string) {
-  const articlesRes = await fetchAPI<Article[]>('/articles', {
+async function getStrapiArticle(slug: string) {
+  const res = await fetchAPI<StrapiArticle[]>('/articles', {
     filters: {
       slug: slug,
     },
     populate: ['image', 'authors.avatar', 'categories', 'seo.metaImage'],
   });
 
-  return articlesRes.data[0];
+  return res.data[0];
 }
 
 export async function generateStaticParams() {
-  const articlesRes = await fetchAPI<Article[]>('/articles', { fields: ['slug'] });
-  return articlesRes.data.map((article: Article) => ({
+  const res = await fetchAPI<StrapiArticle[]>('/articles', { fields: ['slug'] });
+  return res.data.map((article: StrapiArticle) => ({
     slug: article.attributes.slug,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const article = await getArticle(params.slug);
+  const article = await getStrapiArticle(params.slug);
   const seo = article.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
   return {
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const Page = async ({ params }: PageProps) => {
-  const article = await getArticle(params.slug);
+  const article = await getStrapiArticle(params.slug);
   const { title, content, publishedAt } = article.attributes;
   const authors = article.attributes.authors.data;
   return (

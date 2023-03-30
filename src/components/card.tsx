@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import moment from 'moment';
 // local
-import StrapiImage from '@/components/strapi-image';
+import StrapiImage from '@/components/image';
 // types
-import type Article from '@/types/article';
+import type StrapiArticle from '@/types/strapi-article';
 
 type CardProps = {
-  article: Article;
+  article: StrapiArticle;
 };
 
 const Card: React.FC<CardProps> = ({ article }) => {

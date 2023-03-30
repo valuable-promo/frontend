@@ -1,21 +1,14 @@
 'use client';
 
+import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
+// local
+import StrapiImage from '@/components/image';
 // types
-import type Global from '@/types/global';
-import Link from 'next/link';
-import StrapiImage from './strapi-image';
+import type StrapiGlobal from '@/types/strapi-global';
 
 const categories = [
   { name: 'Cloud', href: '#' },
@@ -26,7 +19,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Header({ global }: { global: Global }) {
+export default function Header({ global }: { global: StrapiGlobal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

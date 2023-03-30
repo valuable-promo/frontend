@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 // local
 import Card from '@/components/card';
 import { fetchAPI } from '@/lib/api';
-// types
-import Article from '@/types/article';
-import Global from '@/types/global';
 import { getStrapiMedia } from '@/lib/media';
+// types
+import Article from '@/types/strapi-article';
+import Global from '@/types/strapi-global';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { global } = await getData();

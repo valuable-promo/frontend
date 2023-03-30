@@ -1,13 +1,14 @@
 import Head from 'next/head';
-import { useContext } from 'react';
-import { getStrapiMedia } from '../lib/media';
-import { Image } from '@/types/media';
+// local
+import { getStrapiMedia } from '@/lib/media';
+// types
+import { StrapiImage } from '@/types/strapi-media';
 
 type SeoProps = {
   seo: {
     metaTitle?: string;
     metaDescription?: string;
-    shareImage?: { data: Image };
+    shareImage?: { data: StrapiImage };
     article: boolean;
   };
 };

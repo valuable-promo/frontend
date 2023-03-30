@@ -5,10 +5,10 @@ import Header from '@/components/header';
 import { fetchAPI } from '@/lib/api';
 import '@/styles/globals.css';
 // types
-import type Global from '@/types/global';
+import type StrapiGlobal from '@/types/strapi-global';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const global = await getGlobal();
+  const global = await getStrapiGlobal();
   return {
     title: {
       default: global.attributes.siteName,
@@ -17,17 +17,18 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-async function getGlobal() {
-  const globalRes = await fetchAPI<Global>('/global', {
+async function getStrapiGlobal() {
+  const globalRes = await fetchAPI<StrapiGlobal>('/global', {
     populate: {
       favicon: '*',
+      socials: '*',
     },
   });
   return globalRes.data;
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const global = await getGlobal();
+  const global = await getStrapiGlobal();
   return (
     <html lang="en">
       <body>
