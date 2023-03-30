@@ -1,4 +1,4 @@
-import { Image } from './media';
+import { StrapiImage } from '@/types/strapi-media';
 
 interface MetaSocial {
   id: number;
@@ -7,7 +7,7 @@ interface MetaSocial {
   description: string;
 }
 
-type Seo = {
+type StrapiSeo = {
   id: number;
   metaTitle: string;
   metaDescription: string;
@@ -16,8 +16,8 @@ type Seo = {
   structuredData: string | null;
   metaViewport: string | null;
   canonicalURL: string | null;
-  metaImage: { data: Image };
+  metaImage: { data: StrapiImage };
   metaSocial: MetaSocial[];
 };
 
-export default Seo;
+export default StrapiSeo;

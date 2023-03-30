@@ -1,4 +1,4 @@
-type Image = {
+type StrapiImage = {
   id: number;
   attributes: {
     name: string;
@@ -67,4 +67,4 @@ type Image = {
 
 type ImageFormat = 'thumbnail' | 'small' | 'medium' | 'large';
 
-export type { Image, ImageFormat };
+export type { StrapiImage, ImageFormat };

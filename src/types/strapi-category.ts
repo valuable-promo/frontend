@@ -1,4 +1,4 @@
-type Category = {
+type StrapiCategory = {
   id: number;
   attributes: {
     name: string;
@@ -10,4 +10,4 @@ type Category = {
   };
 };
 
-export default Category;
+export default StrapiCategory;
