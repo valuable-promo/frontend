@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/valuable-promo/frontend/compare/v0.1.7...v0.1.8) (2023-04-05)
+
+
+### Features
+
+* adds author & cat, many improvments ([ba670fa](https://github.com/valuable-promo/frontend/commit/ba670fa1896f8cf0fb8f8c7a8247ebe28c426743))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroicons/react to v2.0.17 ([98d3443](https://github.com/valuable-promo/frontend/commit/98d3443351eb51bbc44d5ea98a436d07023880df))
+* **deps:** update dependency @types/react to v18.0.32 ([568297e](https://github.com/valuable-promo/frontend/commit/568297e8a6173f08ae628fcec554c68dac4d8f60))
+* **deps:** update dependency @types/react to v18.0.33 ([82d4612](https://github.com/valuable-promo/frontend/commit/82d46127d336b807a87d75bf9137bce6a92b66c3))
+* **deps:** update dependency typescript to v5.0.3 ([862eb68](https://github.com/valuable-promo/frontend/commit/862eb685ff2f219f5508ec1b67ace3002980d7ff))
+
 ### [0.1.7](https://github.com/valuable-promo/frontend/compare/v0.1.6...v0.1.7) (2023-03-30)
 
 
