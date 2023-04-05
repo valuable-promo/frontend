@@ -9,18 +9,23 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import StrapiImage from '@/components/image';
 // types
 import type StrapiGlobal from '@/types/strapi-global';
-
-const categories = [
-  { name: 'Cloud', href: '#' },
-  { name: 'Crypto', href: '#' },
-];
+import type StrapiCategory from '@/types/strapi-category';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Header({ global }: { global: StrapiGlobal }) {
+interface HeaderProps {
+  global: StrapiGlobal;
+  categories: StrapiCategory[];
+}
+
+const Header = ({ global, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const cats = categories.map((category) => ({
+    name: category.attributes.name,
+    href: `/category/${category.attributes.slug}`,
+  }));
 
   return (
     <header className="bg-white">
@@ -58,7 +63,7 @@ export default function Header({ global }: { global: StrapiGlobal }) {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
-                {categories.map((item) => (
+                {cats.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -113,7 +118,7 @@ export default function Header({ global }: { global: StrapiGlobal }) {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {categories.map((item) => (
+                        {cats.map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
@@ -132,7 +137,7 @@ export default function Header({ global }: { global: StrapiGlobal }) {
                   href="#"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Authiors
+                  Authors
                 </a>
                 <a
                   href="#"
@@ -154,4 +159,6 @@ export default function Header({ global }: { global: StrapiGlobal }) {
       </Dialog>
     </header>
   );
-}
+};
+
+export default Header;

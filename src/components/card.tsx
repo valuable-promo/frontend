@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import moment from 'moment';
 // local
-import StrapiImage from '@/components/image';
+import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 
@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
     <article key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
       <div className="flex-shrink-0">
         <Link href={`/article/${article.attributes.slug}`}>
-          <StrapiImage image={article.attributes.image} classes="h-48 w-full object-cover" />
+          <SharpImage image={article.attributes.image} classes="h-48 w-full object-cover" />
         </Link>
       </div>
       <div className="flex flex-1 flex-col justify-between bg-white p-6">
@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
                   key={`category__${category.attributes.slug}`}
                   className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100 mr-2 last:mr-0"
                 >
-                  {category.attributes.name}
+                  <Link href={`/category/${category.attributes.slug}`}> {category.attributes.name}</Link>
                 </span>
               );
             })}
@@ -48,12 +48,13 @@ const Card: React.FC<CardProps> = ({ article }) => {
             <div className="isolate flex -space-x-1 overflow-hidden">
               {authors.map((author) => {
                 return (
-                  <StrapiImage
-                    key={author.id}
-                    image={author.attributes.avatar}
-                    fortmat="thumbnail"
-                    classes={`relative z-30 inline-block rounded-full ring-2 ring-white ${avatarSize}`}
-                  />
+                  <Link href={`/author/${author.attributes.slug}`} key={author.id}>
+                    <SharpImage
+                      image={author.attributes.avatar}
+                      fortmat="thumbnail"
+                      classes={`relative z-30 inline-block rounded-full ring-2 ring-white ${avatarSize}`}
+                    />
+                  </Link>
                 );
               })}
             </div>
@@ -65,7 +66,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
                 return (
                   <span key={author.id}>
                     {i > 0 ? ', ' : ''}
-                    {author.attributes.name}
+                    <Link href={`/author/${author.attributes.slug}`}> {author.attributes.name}</Link>
                   </span>
                 );
               })}

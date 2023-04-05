@@ -1,9 +1,10 @@
 import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
-import StrapiImage from '@/components/image';
+import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
@@ -78,12 +79,13 @@ const Page = async ({ params }: PageProps) => {
                 <div className="isolate flex -space-x-1 overflow-hidden">
                   {authors.map((author) => {
                     return (
-                      <StrapiImage
-                        key={author.id}
-                        image={author.attributes.avatar}
-                        fortmat="thumbnail"
-                        classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
-                      />
+                      <Link href={`/author/${author.attributes.slug}`} key={author.id}>
+                        <SharpImage
+                          image={author.attributes.avatar}
+                          fortmat="thumbnail"
+                          classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
+                        />
+                      </Link>
                     );
                   })}
                 </div>
@@ -95,7 +97,7 @@ const Page = async ({ params }: PageProps) => {
                     return (
                       <span key={author.id}>
                         {i > 0 ? ', ' : ''}
-                        {author.attributes.name}
+                        <Link href={`/author/${author.attributes.slug}`}>{author.attributes.name}</Link>
                       </span>
                     );
                   })}

@@ -6,6 +6,7 @@ import { fetchAPI } from '@/lib/api';
 import '@/styles/globals.css';
 // types
 import type StrapiGlobal from '@/types/strapi-global';
+import type StrapiCategory from '@/types/strapi-category';
 
 export async function generateMetadata(): Promise<Metadata> {
   const global = await getStrapiGlobal();
@@ -27,15 +28,23 @@ async function getStrapiGlobal() {
   return globalRes.data;
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+async function getStrapiCategories() {
+  const res = await fetchAPI<StrapiCategory[]>('/categories');
+  return res.data;
+}
+
+const Layout = async ({ children }: { children: React.ReactNode }) => {
   const global = await getStrapiGlobal();
+  const categories = await getStrapiCategories();
   return (
     <html lang="en">
       <body>
-        <Header global={global} />
+        <Header global={global} categories={categories} />
         {children}
         <Footer global={global} />
       </body>
     </html>
   );
-}
+};
+
+export default Layout;

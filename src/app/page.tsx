@@ -71,8 +71,8 @@ export default async function Page() {
           <p>{global.attributes.slogan}</p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-          {articles.map((article, i) => {
-            return <Card article={article} key={`article__left__${article.attributes.slug}`} />;
+          {articles.map((article) => {
+            return <Card article={article} key={article.attributes.slug} />;
           })}
         </div>
       </div>

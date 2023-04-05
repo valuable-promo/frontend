@@ -1,5 +1,5 @@
-import Seo from '@/types/strapi-seo';
-import { StrapiImage } from '@/types/strapi-media';
+import type Seo from '@/types/strapi-seo';
+import type { StrapiImage } from '@/types/strapi-media';
 
 type StrapiGlobal = {
   attributes: {
