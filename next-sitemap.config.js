@@ -13,13 +13,14 @@ module.exports = {
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
     };
     if (isType('article', path)) {
+      const { title, date } = await getMeta(config.sourceDir, path);
       return {
         ...base,
         news: {
-          title: await getTitle('.next', path),
-          publicationName: 'Valuable Promo',
+          title: title,
+          publicationName: process.env.SITE_NAME,
           publicationLanguage: 'en',
-          date: config.autoLastmod ? new Date().toISOString() : undefined,
+          date: config.autoLastmod ? date : new Date().toISOString(),
         },
       };
     }
@@ -27,13 +28,20 @@ module.exports = {
   },
 };
 
-const getTitle = async (sourceDir, path) => {
+const getMeta = async (sourceDir, path) => {
   try {
     const html = await readFile(`${sourceDir}/server/app${path}.html`, 'utf8');
     const title = parseTitle(html);
-    return title;
+    const date = parseDate(html);
+    return {
+      title,
+      date,
+    };
   } catch (err) {
-    return 'Valuable Promo';
+    return {
+      title: process.env.SITE_NAME,
+      date: new Date().toISOString(),
+    };
   }
 };
 
@@ -43,7 +51,17 @@ const isType = (type, path) => {
 };
 
 const parseTitle = (html) => {
-  let match = html.match(/<title>([^<]*)<\/title>/);
-  if (!match || typeof match[1] !== 'string') throw new Error('Unable to parse the title tag');
+  const match = html.match(/<title>([^<]*)<\/title>/);
+  if (!match || typeof match[1] !== 'string') {
+    return process.env.SITE_NAME;
+  }
+  return match[1];
+};
+
+const parseDate = (html) => {
+  let match = html.match(/<time dateTime="([^"]+)">/);
+  if (!match || typeof match[1] !== 'string') {
+    return new Date().toISOString();
+  }
   return match[1];
 };
