@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/valuable-promo/frontend/compare/v0.1.8...v0.1.9) (2023-04-06)
+
+
+### Features
+
+* adds sitemap ([00c6537](https://github.com/valuable-promo/frontend/commit/00c65376b9eef250c74ed167af7e710271b777f3))
+* get date for sitemap ([e255a78](https://github.com/valuable-promo/frontend/commit/e255a78c050d52314faaa2c0a1145e0bcabe836b))
+
+
+### Bug Fixes
+
+* adds missing ARGS in Dockerfile ([162d3bd](https://github.com/valuable-promo/frontend/commit/162d3bd5585b6e9358cfc96862142c2b0536579c))
+* adds missing SITE_URL in Dockerfile ([9245909](https://github.com/valuable-promo/frontend/commit/9245909f3993518fbc446228cd53571841408cd0))
+* missing env in CI ([9638659](https://github.com/valuable-promo/frontend/commit/96386595d8dfab024b1d94f67e15dedd40379b30))
+* typo ([9519993](https://github.com/valuable-promo/frontend/commit/9519993118ebe582db0b2140bc5f1651f0ddd5d3))
+
 ### [0.1.8](https://github.com/valuable-promo/frontend/compare/v0.1.7...v0.1.8) (2023-04-05)
 
 
