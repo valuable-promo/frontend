@@ -125,7 +125,7 @@ const Page = async ({ params }: PageProps) => {
           <article className="prose lg:prose-xl">
             <p className="mt-6 text-xl leading-8">{article.attributes.description}</p>
             <figure className="mt-16">
-              <SharpImage image={article.attributes.image} classes="rounded-sm bg-gray-50 object-cover" />
+              <SharpImage image={article.attributes.image} classes="rounded-md bg-gray-50 object-cover" />
               <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
                 <InformationCircleIcon className="mt-0.5 h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
                 {article.attributes.image.data.attributes.caption}
