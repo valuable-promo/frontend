@@ -1,6 +1,7 @@
 import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
+import { InformationCircleIcon } from '@heroicons/react/20/solid';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
@@ -108,7 +109,27 @@ const Page = async ({ params }: PageProps) => {
               </div>
             </div>
           </div>
+          <div className="text-sm font-medium text-indigo-600 mt-5 mb-5">
+            {article.attributes.categories.data.map((category) => {
+              return (
+                <span
+                  key={category.attributes.slug}
+                  className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100 mr-2 last:mr-0"
+                >
+                  <Link href={`/category/${category.attributes.slug}`}> {category.attributes.name}</Link>
+                </span>
+              );
+            })}
+          </div>
           <article className="prose lg:prose-xl">
+            <p className="mt-6 text-xl leading-8">{article.attributes.description}</p>
+            <figure className="mt-16">
+              <SharpImage image={article.attributes.image} classes="rounded-sm bg-gray-50 object-cover" />
+              <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+                <InformationCircleIcon className="mt-0.5 h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
+                {article.attributes.image.data.attributes.caption}
+              </figcaption>
+            </figure>
             <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
           </article>
         </div>
