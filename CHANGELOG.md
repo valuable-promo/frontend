@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/valuable-promo/frontend/compare/v0.1.9...v0.1.10) (2023-04-06)
+
+
+### Features
+
+* adds article image ([1d413db](https://github.com/valuable-promo/frontend/commit/1d413db11d5eed6c26fe304afe54502a473fd7ef))
+* adds image priority ([2a19b11](https://github.com/valuable-promo/frontend/commit/2a19b112e08e15ff8bd7e0343c9b5499e48f4ae8))
+
 ### [0.1.9](https://github.com/valuable-promo/frontend/compare/v0.1.8...v0.1.9) (2023-04-06)
 
 
