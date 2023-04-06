@@ -82,6 +82,7 @@ const Page = async ({ params }: PageProps) => {
                     return (
                       <Link href={`/author/${author.attributes.slug}`} key={author.id}>
                         <SharpImage
+                          priority
                           image={author.attributes.avatar}
                           fortmat="thumbnail"
                           classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
