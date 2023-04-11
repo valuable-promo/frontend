@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/valuable-promo/frontend/compare/v0.1.13...v0.1.14) (2023-04-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/react to v18.0.34 ([3fb5aef](https://github.com/valuable-promo/frontend/commit/3fb5aef2a3d942bf7a3dfe8de8f542ed291c8201))
+* **deps:** update dependency next-sitemap to v4.0.7 ([e171eea](https://github.com/valuable-promo/frontend/commit/e171eea1f6a440b2de16d612e7bb2a1fd74bd8fd))
+
 ### [0.1.13](https://github.com/valuable-promo/frontend/compare/v0.1.12...v0.1.13) (2023-04-08)
 
 
