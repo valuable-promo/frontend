@@ -11,7 +11,7 @@
     "release": "npx standard-version && git push --follow-tags origin main"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.13",
+    "@headlessui/react": "1.7.14",
     "@heroicons/react": "2.0.17",
     "@types/node": "18.15.11",
     "@types/react": "18.0.34",
