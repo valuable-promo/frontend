@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.15](https://github.com/valuable-promo/frontend/compare/v0.1.14...v0.1.15) (2023-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @headlessui/react to v1.7.14 ([592589a](https://github.com/valuable-promo/frontend/commit/592589ada33c54fe1624f311ca802f450c22d60b))
+* **deps:** update dependency @types/react to v18.0.35 ([7c94c35](https://github.com/valuable-promo/frontend/commit/7c94c3553a04d029f00a1753febc1f2a1a6a8206))
+* **deps:** update dependency react-markdown to v8.0.7 ([3244ab8](https://github.com/valuable-promo/frontend/commit/3244ab83fe449e6cbd2e8a29c8e11ffaabbd1163))
+
 ### [0.1.14](https://github.com/valuable-promo/frontend/compare/v0.1.13...v0.1.14) (2023-04-11)
 
 
