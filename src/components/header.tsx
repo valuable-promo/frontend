@@ -20,6 +20,11 @@ interface HeaderProps {
   categories: StrapiCategory[];
 }
 
+const navigation = [
+  { name: 'Submission', href: '/submission' },
+  { name: 'About', href: '/about' },
+];
+
 const Header = ({ global, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cats = categories.map((category) => ({
@@ -76,15 +81,11 @@ const Header = ({ global, categories }: HeaderProps) => {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Authors
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Submission
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            About
-          </a>
+          {navigation.map((item) => (
+            <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              {item.name}
+            </Link>
+          ))}
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -133,25 +134,15 @@ const Header = ({ global, categories }: HeaderProps) => {
                   )}
                 </Disclosure>
 
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Authors
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Submission
-                </a>
-
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  About
-                </a>
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
