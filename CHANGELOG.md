@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/valuable-promo/frontend/compare/v0.1.15...v0.1.16) (2023-04-15)
+
+
+### Features
+
+* adds about page ([c081fb5](https://github.com/valuable-promo/frontend/commit/c081fb54d9889205685e6601441aec1a3df21d90))
+* dynamic header navigation ([257b0fd](https://github.com/valuable-promo/frontend/commit/257b0fd95e8e85542367d578b2b46872c8e8fb01))
+
 ### [0.1.15](https://github.com/valuable-promo/frontend/compare/v0.1.14...v0.1.15) (2023-04-13)
 
 
