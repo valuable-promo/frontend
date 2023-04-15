@@ -5,6 +5,7 @@ type StrapiGlobal = {
   attributes: {
     siteName: string;
     slogan: string;
+    about: string;
     favicon: {
       data: StrapiImage;
     };
