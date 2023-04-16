@@ -18,7 +18,7 @@ module.exports = {
         ...base,
         news: {
           title: title,
-          publicationName: process.env.SITE_NAME,
+          publicationName: process.env.NEXT_PUBLIC_SITE_NAME,
           publicationLanguage: 'en',
           date: config.autoLastmod ? date : new Date().toISOString(),
         },
@@ -39,7 +39,7 @@ const getMeta = async (sourceDir, path) => {
     };
   } catch (err) {
     return {
-      title: process.env.SITE_NAME,
+      title: process.env.NEXT_PUBLIC_SITE_NAME,
       date: new Date().toISOString(),
     };
   }
