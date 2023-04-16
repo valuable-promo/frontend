@@ -9,7 +9,6 @@ import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
-import Adsense from '@/components/adsense';
 
 interface PageProps {
   params: {
