@@ -9,6 +9,7 @@ import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
+import Adsense from '@/components/adsense';
 
 interface PageProps {
   params: {
@@ -65,10 +66,58 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+const generateJsonLd = (article: StrapiArticle) => {
+  const authors = article.attributes.authors.data;
+  const image = getStrapiMedia(article.attributes.image.data);
+  const createdAt = moment(article.attributes.createdAt).format('YYYY-MM-DD');
+  const publishedAt = moment(article.attributes.publishedAt).format('YYYY-MM-DD');
+  const modifiedAt = moment(article.attributes.updatedAt).format('YYYY-MM-DD');
+  // author data
+  const authorData = authors.map((author) => {
+    return {
+      '@type': 'Person',
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/author/${author.attributes.slug}`,
+      name: author.attributes.name,
+    };
+  });
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/article/${article.attributes.slug}`,
+    author: authorData,
+    name: article.attributes.title,
+    headline: article.attributes.description,
+    articleBody: article.attributes.content,
+    image: {
+      '@type': 'ImageObject',
+      url: image.url,
+      width: image.width,
+      height: image.height,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/article/${article.attributes.slug}`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png`,
+      },
+      name: process.env.NEXT_PUBLIC_SITE_NAME,
+    },
+
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
+    dateCreated: createdAt,
+  };
+};
+
 const Page = async ({ params }: PageProps) => {
   const article = await getStrapiArticle(params.slug);
   const { title, content, publishedAt } = article.attributes;
   const authors = article.attributes.authors.data;
+  const jsonld = generateJsonLd(article);
   return (
     <div className="">
       <div className="bg-white py-32 px-6 lg:px-8">
@@ -133,6 +182,7 @@ const Page = async ({ params }: PageProps) => {
             </figure>
             <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
           </article>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }} />
         </div>
       </div>
     </div>
