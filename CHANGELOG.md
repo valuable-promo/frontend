@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.18](https://github.com/valuable-promo/frontend/compare/v0.1.17...v0.1.18) (2023-04-16)
+
+
+### Features
+
+* adds jsonld for article ([ae257ff](https://github.com/valuable-promo/frontend/commit/ae257ff6097141e4e301361c3f521339827035df))
+
+
+### Bug Fixes
+
+* removes Adsense component ([fc933a5](https://github.com/valuable-promo/frontend/commit/fc933a56042cc9a91a502bc2dd89da36992d20b7))
+* updates sitemap config ([e4371a1](https://github.com/valuable-promo/frontend/commit/e4371a1021dede37fa45b73641093902c0a504a0))
+
 ### [0.1.17](https://github.com/valuable-promo/frontend/compare/v0.1.16...v0.1.17) (2023-04-16)
 
 ### [0.1.16](https://github.com/valuable-promo/frontend/compare/v0.1.15...v0.1.16) (2023-04-15)
