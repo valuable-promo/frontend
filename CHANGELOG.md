@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.19](https://github.com/valuable-promo/frontend/compare/v0.1.18...v0.1.19) (2023-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/react to v18.0.37 ([3f126c8](https://github.com/valuable-promo/frontend/commit/3f126c814b7b2d8ed6e9c11517e329af4ecd5576))
+
 ### [0.1.18](https://github.com/valuable-promo/frontend/compare/v0.1.17...v0.1.18) (2023-04-16)
 
 
