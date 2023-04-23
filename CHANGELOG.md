@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.21](https://github.com/valuable-promo/frontend/compare/v0.1.20...v0.1.21) (2023-04-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.0 ([8324af8](https://github.com/valuable-promo/frontend/commit/8324af8000306c9d147d11908855762042e84906))
+* **deps:** update dependency @types/react to v18.0.38 ([f3eb85d](https://github.com/valuable-promo/frontend/commit/f3eb85da226315c264eaee8523d7fe7fa9f08093))
+* **deps:** update dependency eslint to v8.39.0 ([eb7873d](https://github.com/valuable-promo/frontend/commit/eb7873da26ab802fd4199222847cd262ec4f0719))
+
 ### [0.1.20](https://github.com/valuable-promo/frontend/compare/v0.1.19...v0.1.20) (2023-04-23)
 
 
