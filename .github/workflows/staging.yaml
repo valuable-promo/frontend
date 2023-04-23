@@ -42,12 +42,3 @@ jobs:
           tags: ghcr.io/${{github.repository}}:main
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-  deploy:
-    needs: build
-    uses: valuable-promo/infra/.github/workflows/deploy-staging.yaml@main
-    with:
-      namespace: valuable-promo-staging
-      deployment: frontend-depl
-    secrets:
-      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
