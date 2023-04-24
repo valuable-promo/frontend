@@ -41,6 +41,7 @@ async function getData() {
   const [articlesRes, globalRes] = await Promise.all([
     fetchAPI<Article[]>('/articles', {
       populate: ['image', 'categories', 'authors.avatar'],
+      sort: 'createdAt:DESC',
     }),
     fetchAPI<Global>('/global', {
       populate: {

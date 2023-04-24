@@ -9,6 +9,7 @@ import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
+import Adsense from '@/components/adsense';
 
 interface PageProps {
   params: {
@@ -179,6 +180,7 @@ const Page = async ({ params }: PageProps) => {
                 {article.attributes.image.data.attributes.caption}
               </figcaption>
             </figure>
+            <Adsense />
             <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
           </article>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }} />

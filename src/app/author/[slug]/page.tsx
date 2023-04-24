@@ -11,6 +11,7 @@ async function getStrapiAuthor(slug: string) {
     filters: {
       slug: slug,
     },
+    sort: 'createdAt:DESC',
     populate: ['avatar', 'articles.authors.avatar', 'articles.image', 'articles.seo.metaImage', 'articles.categories'],
   });
 

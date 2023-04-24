@@ -17,7 +17,7 @@ async function getStrapiCategory(slug: string) {
 }
 
 export async function generateStaticParams() {
-  const res = await fetchAPI<StrapiCategory[]>('/categories', { fields: ['slug'] });
+  const res = await fetchAPI<StrapiCategory[]>('/categories', { fields: ['slug'], sort: 'createdAt:DESC' });
   return res.data.map((category: StrapiCategory) => ({
     slug: category.attributes.slug,
   }));
