@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/valuable-promo/frontend/compare/v0.1.22...v0.1.23) (2023-04-24)
+
+
+### Bug Fixes
+
+* missing component ([9831800](https://github.com/valuable-promo/frontend/commit/9831800c0a0b72b8008a4400cca64f8490809ba5))
+
 ### [0.1.22](https://github.com/valuable-promo/frontend/compare/v0.1.21...v0.1.22) (2023-04-24)
 
 
