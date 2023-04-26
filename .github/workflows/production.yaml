@@ -40,3 +40,12 @@ jobs:
           tags: ghcr.io/${{github.repository}}:${{github.ref_name}},ghcr.io/${{github.repository}}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build
+    uses: valuable-promo/infra/.github/workflows/deploy-production.yaml@main
+    with:
+      namespace: valuable-promo-prod
+      yaml-path: k8s/prod.depl.yaml
+    secrets:
+      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_PROD }}
