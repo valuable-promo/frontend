@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.24](https://github.com/valuable-promo/frontend/compare/v0.1.23...v0.1.24) (2023-04-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.1 ([8ddc77d](https://github.com/valuable-promo/frontend/commit/8ddc77d152cedc40c96686cd4885dab945441a66))
+* **deps:** update dependency sharp to v0.32.1 ([1fa4595](https://github.com/valuable-promo/frontend/commit/1fa45958d65ae16f6a3e2f81e368cb2ba2dfdb92))
+* **deps:** update react monorepo ([16eeeb0](https://github.com/valuable-promo/frontend/commit/16eeeb00741ff164ac3289a114c4de53218634ba))
+
 ### [0.1.23](https://github.com/valuable-promo/frontend/compare/v0.1.22...v0.1.23) (2023-04-24)
 
 
