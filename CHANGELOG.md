@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.25](https://github.com/valuable-promo/frontend/compare/v0.1.24...v0.1.25) (2023-04-27)
+
+
+### Bug Fixes
+
+* sitemap config ([618bcb5](https://github.com/valuable-promo/frontend/commit/618bcb57b0e9f7aa90d902d6763d4e02da215098))
+
 ### [0.1.24](https://github.com/valuable-promo/frontend/compare/v0.1.23...v0.1.24) (2023-04-27)
 
 
