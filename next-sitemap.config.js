@@ -1,7 +1,7 @@
 const { readFile } = require('fs/promises');
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL,
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
   generateRobotsTxt: true,
   sitemapSize: 5000,
   exclude: ['/', '/cookie', '/disclaimer', '/privacy', '/terms'],
@@ -53,7 +53,7 @@ const isType = (type, path) => {
 const parseTitle = (html) => {
   const match = html.match(/<title>([^<]*)<\/title>/);
   if (!match || typeof match[1] !== 'string') {
-    return process.env.SITE_NAME;
+    return process.env.NEXT_PUBLIC_SITE_NAME;
   }
   return match[1];
 };
