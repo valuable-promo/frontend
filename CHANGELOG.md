@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.26](https://github.com/valuable-promo/frontend/compare/v0.1.25...v0.1.26) (2023-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.2 ([f2df934](https://github.com/valuable-promo/frontend/commit/f2df934b7da30a2cf077c4c8934d703f211d22bd))
+
 ### [0.1.25](https://github.com/valuable-promo/frontend/compare/v0.1.24...v0.1.25) (2023-04-27)
 
 
