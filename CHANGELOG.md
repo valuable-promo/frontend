@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/valuable-promo/frontend/compare/v0.1.26...v0.1.27) (2023-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.3 ([5571805](https://github.com/valuable-promo/frontend/commit/5571805976c7c25eecc1f5c63198af6e6a15a12e))
+* **deps:** update nextjs monorepo to v13.3.2 ([41ba902](https://github.com/valuable-promo/frontend/commit/41ba90247eb563de6a9ef4461dcac9db600320bf))
+
 ### [0.1.26](https://github.com/valuable-promo/frontend/compare/v0.1.25...v0.1.26) (2023-04-28)
 
 
