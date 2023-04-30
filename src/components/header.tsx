@@ -69,13 +69,13 @@ const Header = ({ global, categories }: HeaderProps) => {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
                 {cats.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </Popover.Panel>
             </Transition>
