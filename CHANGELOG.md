@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.32](https://github.com/valuable-promo/frontend/compare/v0.1.31...v0.1.32) (2023-05-05)
+
+
+### Bug Fixes
+
+* **deps:** update nextjs monorepo to v13.4.1 ([1ace4f5](https://github.com/valuable-promo/frontend/commit/1ace4f5890366691a5ccb2fe1cb301b0f4b9a76c))
+
 ### [0.1.31](https://github.com/valuable-promo/frontend/compare/v0.1.30...v0.1.31) (2023-05-05)
 
 
