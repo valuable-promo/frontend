@@ -1,3 +1,6 @@
+import { fetchAPI } from '@/lib/api';
+import StrapiArticle from '@/types/strapi-article';
+import StrapiCategory from '@/types/strapi-category';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,7 +25,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (track.events.includes(event) && track.models.includes(model)) {
       if (model === 'article') {
         console.log(`Revalidating article: ${entry.slug}`);
-        await Promise.all([res.revalidate('/'), res.revalidate(`/article/${entry.slug}`)]);
+        // load article and category
+        const atrapiRes = await fetchAPI<StrapiArticle[]>('/articles', {
+          filters: {
+            slug: entry.slug,
+          },
+          populate: ['categories'],
+        });
+
+        const article = atrapiRes.data[0];
+        const categories = article.attributes.categories;
+        await Promise.all([
+          res.revalidate('/'),
+          res.revalidate(`/article/${entry.slug}`),
+          ...categories.data.map((category: StrapiCategory) => res.revalidate(`/category/${category.attributes.slug}`)),
+        ]);
       }
       if (model === 'author') {
         console.log(`Revalidating author: ${entry.slug}`);
