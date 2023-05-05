@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.31](https://github.com/valuable-promo/frontend/compare/v0.1.30...v0.1.31) (2023-05-05)
+
+
+### Features
+
+* adds revalidate api ([3d69c9a](https://github.com/valuable-promo/frontend/commit/3d69c9a53912e5d7a094e3efacd4ec8635f83e1e))
+
 ### [0.1.30](https://github.com/valuable-promo/frontend/compare/v0.1.29...v0.1.30) (2023-05-05)
 
 
