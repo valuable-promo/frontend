@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.34](https://github.com/valuable-promo/frontend/compare/v0.1.33...v0.1.34) (2023-05-05)
+
+
+### Features
+
+* adds sorting for cat and author page ([ffc26be](https://github.com/valuable-promo/frontend/commit/ffc26bee517b68b221e96744816517b8e0e36061))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/react-dom to v18.2.4 ([7c1ad1f](https://github.com/valuable-promo/frontend/commit/7c1ad1f2327545ae820f8e3f061fb9684b597250))
+
 ### [0.1.33](https://github.com/valuable-promo/frontend/compare/v0.1.32...v0.1.33) (2023-05-05)
 
 
