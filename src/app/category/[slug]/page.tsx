@@ -1,19 +1,34 @@
+import type { Metadata } from 'next';
 // local
 import Card from '@/components/card';
 import { fetchAPI } from '@/lib/api';
 // types
-import type { Metadata } from 'next';
 import type StrapiCategory from '@/types/strapi-category';
+import type StrapiArticle from '@/types/strapi-article';
 
 async function getStrapiCategory(slug: string) {
   const res = await fetchAPI<StrapiCategory[]>('/categories', {
     filters: {
       slug: slug,
     },
-    populate: ['articles.authors.avatar', 'articles.image', 'articles.seo.metaImage', 'articles.categories'],
   });
 
   return res.data[0];
+}
+
+async function getStrapiArticles(categorySlug: string) {
+  const res = await fetchAPI<StrapiArticle[]>('/articles', {
+    populate: ['image', 'categories', 'authors.avatar'],
+    filters: {
+      categories: {
+        slug: {
+          $eqi: categorySlug,
+        },
+      },
+    },
+    sort: 'createdAt:DESC',
+  });
+  return res.data;
 }
 
 export async function generateStaticParams() {
@@ -40,7 +55,7 @@ interface PageProps {
 
 const Page = async ({ params }: PageProps) => {
   const category = await getStrapiCategory(params.slug);
-  const articles = category.attributes.articles.data;
+  const articles = await getStrapiArticles(params.slug);
   return (
     <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-2xl text-center">

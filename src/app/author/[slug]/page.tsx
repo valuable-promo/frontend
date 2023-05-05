@@ -1,21 +1,36 @@
+import type { Metadata } from 'next';
 // local
 import Card from '@/components/card';
 import { fetchAPI } from '@/lib/api';
 import SharpImage from '@/components/image';
 // types
-import type { Metadata } from 'next';
 import type StrapiAuthor from '@/types/strapi-author';
+import type StrapiArticle from '@/types/strapi-article';
 
 async function getStrapiAuthor(slug: string) {
   const res = await fetchAPI<StrapiAuthor[]>('/authors', {
     filters: {
       slug: slug,
     },
-    sort: 'createdAt:DESC',
-    populate: ['avatar', 'articles.authors.avatar', 'articles.image', 'articles.seo.metaImage', 'articles.categories'],
+    populate: ['avatar'],
   });
 
   return res.data[0];
+}
+
+async function getStrapiArticles(authorSlug: string) {
+  const res = await fetchAPI<StrapiArticle[]>('/articles', {
+    populate: ['image', 'categories', 'authors.avatar'],
+    filters: {
+      authors: {
+        slug: {
+          $eqi: authorSlug,
+        },
+      },
+    },
+    sort: 'createdAt:DESC',
+  });
+  return res.data;
 }
 
 export async function generateStaticParams() {
@@ -41,7 +56,7 @@ interface PageProps {
 
 const Page = async ({ params }: PageProps) => {
   const author = await getStrapiAuthor(params.slug);
-  const articles = author.attributes.articles.data;
+  const articles = await getStrapiArticles(params.slug);
   return (
     <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="relative mx-auto max-w-7xl">
