@@ -26,6 +26,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const category = await getStrapiCategory(params.slug);
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
     title: category.attributes.name,
     description: category.attributes.description,
   };

@@ -2,10 +2,12 @@ import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
 import { InformationCircleIcon } from '@heroicons/react/20/solid';
+
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
 import SharpImage from '@/components/image';
+
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
@@ -39,6 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const seo = article.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
     title: article.attributes.title,
     description: article.attributes.description,
     keywords: seo.keywords,

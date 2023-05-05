@@ -1,12 +1,10 @@
-import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
+
 // local
 import SharpImage from '@/components/image';
 import { fetchAPI } from '@/lib/api';
-import { getStrapiMedia } from '@/lib/media';
+
 // types
-import type { Metadata } from 'next';
-import type StrapiPage from '@/types/strapi-page';
 import StrapiContributor from '@/types/strapi-contributor';
 import StrapiAbout from '@/types/strapi-about';
 

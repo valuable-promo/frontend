@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const seo = entity.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
     title: entity.attributes.title,
     description: entity.attributes.description,
     keywords: seo.keywords,

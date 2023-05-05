@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const seo = global.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
     description: seo.metaDescription,
     keywords: seo.keywords,
     openGraph: {
