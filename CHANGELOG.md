@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.30](https://github.com/valuable-promo/frontend/compare/v0.1.29...v0.1.30) (2023-05-05)
+
+
+### Features
+
+* adds metadataBase data ([68266cc](https://github.com/valuable-promo/frontend/commit/68266ccd829a034e5e9ae9034b6ebcba5c0da037))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.4 ([6d89d85](https://github.com/valuable-promo/frontend/commit/6d89d85e59085b117a0f25112b5ed94f53e14962))
+* **deps:** update nextjs monorepo to v13.4.0 ([8ff7aea](https://github.com/valuable-promo/frontend/commit/8ff7aea0839a88b210d312c3704506346d0ffe85))
+* **deps:** update react monorepo ([3509658](https://github.com/valuable-promo/frontend/commit/3509658b443363b863de3cdd408046a23acb0bd6))
+
 ### [0.1.29](https://github.com/valuable-promo/frontend/compare/v0.1.28...v0.1.29) (2023-05-01)
 
 
