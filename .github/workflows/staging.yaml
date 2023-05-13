@@ -7,7 +7,10 @@ on:
       - '**/**.md'
       - 'docker-compose.yml'
 jobs:
+  test:
+    uses: ./.github/workflows/testing.yaml
   build:
+    needs: test
     runs-on: ubuntu-latest
     environment:
       name: staging

@@ -5,7 +5,10 @@ on:
     tags: [v*]
 
 jobs:
+  test:
+    uses: ./.github/workflows/testing.yaml
   build:
+    needs: test
     runs-on: ubuntu-latest
     environment:
       name: prod
