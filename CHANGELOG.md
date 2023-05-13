@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.36](https://github.com/valuable-promo/frontend/compare/v0.1.35...v0.1.36) (2023-05-13)
+
+
+### Features
+
+* adds CI testing ([750a6d4](https://github.com/valuable-promo/frontend/commit/750a6d4d0c646914d526d2ed93c8f8faee7ca5b3))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroicons/react to v2.0.18 ([a7e48d9](https://github.com/valuable-promo/frontend/commit/a7e48d99f84205482447018a3131fde05f508deb))
+* **deps:** update dependency @types/node to v18.16.6 ([2997b91](https://github.com/valuable-promo/frontend/commit/2997b917b37edd60477500eb5b04e55fa97ee9e8))
+* **deps:** update dependency @types/node to v18.16.7 ([b6913b5](https://github.com/valuable-promo/frontend/commit/b6913b5ebe30ae5ba96eb2b46d8fa2ac13046d13))
+* **deps:** update dependency @types/node to v18.16.8 ([4d23688](https://github.com/valuable-promo/frontend/commit/4d23688f4526b54748833cd743e0d4e6caa032ff))
+* **deps:** update nextjs monorepo to v13.4.2 ([8607347](https://github.com/valuable-promo/frontend/commit/8607347d61a46bdf176d513c38628bb46703eeec))
+
 ### [0.1.35](https://github.com/valuable-promo/frontend/compare/v0.1.34...v0.1.35) (2023-05-06)
 
 
