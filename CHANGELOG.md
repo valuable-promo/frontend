@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.37](https://github.com/valuable-promo/frontend/compare/v0.1.36...v0.1.37) (2023-05-19)
+
+
+### Features
+
+* adds PR CI flow ([9a4f029](https://github.com/valuable-promo/frontend/commit/9a4f029d50bad67c12739939c1f6a74c45f12a6f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.10 ([c1c9f83](https://github.com/valuable-promo/frontend/commit/c1c9f83cf7c3edc13696fabee4f3da16efe2aeb2))
+* **deps:** update dependency @types/node to v18.16.12 ([#87](https://github.com/valuable-promo/frontend/issues/87)) ([2d99a16](https://github.com/valuable-promo/frontend/commit/2d99a165c774bd55686a64dc76c777aba66edcc2))
+* **deps:** update dependency @types/node to v18.16.13 ([#88](https://github.com/valuable-promo/frontend/issues/88)) ([5c1ba9e](https://github.com/valuable-promo/frontend/commit/5c1ba9e845f9a56d1350a362402f6b94f91d29a8))
+* **deps:** update dependency @types/node to v18.16.9 ([0241196](https://github.com/valuable-promo/frontend/commit/024119616bde534a13a8ead21c31b85374ce62ef))
+* **deps:** update dependency next-sitemap to v4.1.3 ([a8a8c32](https://github.com/valuable-promo/frontend/commit/a8a8c325aa999d5bfbcb5e2fc5ed46d72ba1cd78))
+* **deps:** update dependency qs to v6.11.2 ([738e6ae](https://github.com/valuable-promo/frontend/commit/738e6ae7227fdfb8e542b364e12ebc6ca81eb6d7))
+* **deps:** update nextjs monorepo to v13.4.3 ([#90](https://github.com/valuable-promo/frontend/issues/90)) ([a967664](https://github.com/valuable-promo/frontend/commit/a967664c4ef6a7ce9dc7c46d65fb45cd6e402e9f))
+* typo in CI workflow ([6d55867](https://github.com/valuable-promo/frontend/commit/6d5586741d7b0711bfa2fe62209e9cfefb966351))
+
 ### [0.1.36](https://github.com/valuable-promo/frontend/compare/v0.1.35...v0.1.36) (2023-05-13)
 
 
