@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.38](https://github.com/valuable-promo/frontend/compare/v0.1.37...v0.1.38) (2023-06-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @headlessui/react to v1.7.15 ([#97](https://github.com/valuable-promo/frontend/issues/97)) ([63639a3](https://github.com/valuable-promo/frontend/commit/63639a32ab737bcce530b807f70a0078fd56c0a6))
+* **deps:** update dependency @types/node to v18.16.14 ([#92](https://github.com/valuable-promo/frontend/issues/92)) ([c93ee8b](https://github.com/valuable-promo/frontend/commit/c93ee8bbc488bb8425042f3d995c951f3d132f6a))
+* **deps:** update dependency @types/node to v18.16.15 ([#94](https://github.com/valuable-promo/frontend/issues/94)) ([9d96e22](https://github.com/valuable-promo/frontend/commit/9d96e221627b3af4af9c959ef3b9b71b5820d97b))
+* **deps:** update dependency @types/node to v18.16.16 ([#96](https://github.com/valuable-promo/frontend/issues/96)) ([bd10424](https://github.com/valuable-promo/frontend/commit/bd10424a40ef355283dc3376c32eea253363f414))
+* **deps:** update dependency @types/react to v18.2.7 ([#93](https://github.com/valuable-promo/frontend/issues/93)) ([df69931](https://github.com/valuable-promo/frontend/commit/df69931e281fa52522f1c24fc0ec79ba6c02669d))
+* **deps:** update dependency @types/react to v18.2.8 ([#98](https://github.com/valuable-promo/frontend/issues/98)) ([b416faf](https://github.com/valuable-promo/frontend/commit/b416faf1a01ba3f433d901ac46140dc14a504caa))
+* **deps:** update dependency eslint to v8.41.0 ([2238d6b](https://github.com/valuable-promo/frontend/commit/2238d6b21b8e3cdf1371b4d3e760cd05ed84706e))
+* **deps:** update dependency eslint to v8.42.0 ([01711dd](https://github.com/valuable-promo/frontend/commit/01711ddbdda6e9ff4865f9011f5b329f8958c379))
+* **deps:** update dependency typescript to v5.1.3 ([83362ba](https://github.com/valuable-promo/frontend/commit/83362ba7662dcd4b9fb13cfc0b0ae2589a22b45c))
+* **deps:** update nextjs monorepo to v13.4.4 ([#95](https://github.com/valuable-promo/frontend/issues/95)) ([98ade91](https://github.com/valuable-promo/frontend/commit/98ade91240b34700cea1a0b2d1da812318371f49))
+
 ### [0.1.37](https://github.com/valuable-promo/frontend/compare/v0.1.36...v0.1.37) (2023-05-19)
 
 
