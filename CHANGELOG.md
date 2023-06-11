@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.39](https://github.com/valuable-promo/frontend/compare/v0.1.38...v0.1.39) (2023-06-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.17 ([#102](https://github.com/valuable-promo/frontend/issues/102)) ([a6dc9d4](https://github.com/valuable-promo/frontend/commit/a6dc9d4583f808c8e97ab3e6ccdd95d0e6de113f))
+* **deps:** update dependency @types/react to v18.2.10 ([#103](https://github.com/valuable-promo/frontend/issues/103)) ([6118b3c](https://github.com/valuable-promo/frontend/commit/6118b3c758681feea6c8f05740e51462db16987e))
+* **deps:** update dependency @types/react to v18.2.11 ([#104](https://github.com/valuable-promo/frontend/issues/104)) ([a2734bf](https://github.com/valuable-promo/frontend/commit/a2734bff252d04a61a8a6eaac849efa2622fb311))
+* **deps:** update dependency @types/react to v18.2.9 ([#101](https://github.com/valuable-promo/frontend/issues/101)) ([fe53795](https://github.com/valuable-promo/frontend/commit/fe53795b729d2f1446265f49959756b48c473bf0))
+* **deps:** update nextjs monorepo to v13.4.5 ([#105](https://github.com/valuable-promo/frontend/issues/105)) ([905e7af](https://github.com/valuable-promo/frontend/commit/905e7af169b7ccb75fa8cccd32ac91858f991f9a))
+
 ### [0.1.38](https://github.com/valuable-promo/frontend/compare/v0.1.37...v0.1.38) (2023-06-07)
 
 
