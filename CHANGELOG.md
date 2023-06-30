@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/valuable-promo/frontend/compare/v0.1.39...v0.2.0) (2023-06-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.18 ([#107](https://github.com/valuable-promo/frontend/issues/107)) ([e03b6cc](https://github.com/valuable-promo/frontend/commit/e03b6cc15ed4b19da1f1af26ee3ccc7291a3aa96))
+* **deps:** update dependency @types/react to v18.2.14 ([#114](https://github.com/valuable-promo/frontend/issues/114)) ([90f2378](https://github.com/valuable-promo/frontend/commit/90f23780d798419cdd4e918a1cb4dcd5316f0590))
+* **deps:** update dependency eslint to v8.43.0 ([6cebd74](https://github.com/valuable-promo/frontend/commit/6cebd749b7654a1bcdc08f777840d1aaa602a558))
+* **deps:** update dependency typescript to v5.1.5 ([#115](https://github.com/valuable-promo/frontend/issues/115)) ([ae27813](https://github.com/valuable-promo/frontend/commit/ae278130e1689f0c44a5e2a45b4a80eba427e244))
+* **deps:** update dependency typescript to v5.1.6 ([#116](https://github.com/valuable-promo/frontend/issues/116)) ([63c9c07](https://github.com/valuable-promo/frontend/commit/63c9c07ff2eae7decec7510408ac42a0f910305a))
+* **deps:** update nextjs monorepo to v13.4.6 ([#110](https://github.com/valuable-promo/frontend/issues/110)) ([e695ffb](https://github.com/valuable-promo/frontend/commit/e695ffb4437e8271b9d97ba45e995fd47c3927b5))
+* **deps:** update nextjs monorepo to v13.4.7 ([#113](https://github.com/valuable-promo/frontend/issues/113)) ([029a509](https://github.com/valuable-promo/frontend/commit/029a50963691c1425de959add43e87889bbe7bab))
+* **deps:** update react monorepo ([#106](https://github.com/valuable-promo/frontend/issues/106)) ([6456b0a](https://github.com/valuable-promo/frontend/commit/6456b0a03dcc778a9f5b9f57d13738c093929034))
+* **deps:** update react monorepo ([#112](https://github.com/valuable-promo/frontend/issues/112)) ([5b3f6ef](https://github.com/valuable-promo/frontend/commit/5b3f6efe1aa9c33854942a0d78ec2ef50d61c767))
+
 ### [0.1.39](https://github.com/valuable-promo/frontend/compare/v0.1.38...v0.1.39) (2023-06-11)
 
 
