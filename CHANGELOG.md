@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/valuable-promo/frontend/compare/v0.2.0...v0.2.1) (2023-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.19 ([#117](https://github.com/valuable-promo/frontend/issues/117)) ([2753292](https://github.com/valuable-promo/frontend/commit/2753292542ea22f630772b3e15387d6c31891f85))
+* **deps:** update dependency eslint to v8.44.0 ([58c1bee](https://github.com/valuable-promo/frontend/commit/58c1beee148962c84d344e5d3a0299336e489910))
+* **deps:** update dependency next-sitemap to v4.1.8 ([#118](https://github.com/valuable-promo/frontend/issues/118)) ([28f6c63](https://github.com/valuable-promo/frontend/commit/28f6c63e278c6a0e06c417df43d296a0c631102a))
+* **deps:** update nextjs monorepo to v13.4.8 ([#120](https://github.com/valuable-promo/frontend/issues/120)) ([c27c503](https://github.com/valuable-promo/frontend/commit/c27c5033d524ca5a8f4ad8e7da40b4bbf6d8d0c5))
+
 ## [0.2.0](https://github.com/valuable-promo/frontend/compare/v0.1.39...v0.2.0) (2023-06-30)
 
 
