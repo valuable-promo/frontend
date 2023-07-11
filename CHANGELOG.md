@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/valuable-promo/frontend/compare/v1.0.0...v1.0.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sharp to v0.32.2 ([#123](https://github.com/valuable-promo/frontend/issues/123)) ([6991a4f](https://github.com/valuable-promo/frontend/commit/6991a4fac9827560b1cf5c1bf86bd3af14c05c9f))
+
 ## [1.0.0](https://github.com/valuable-promo/frontend/compare/v0.3.0...v1.0.0) (2023-07-09)
 
 ## [0.3.0](https://github.com/valuable-promo/frontend/compare/v0.2.2...v0.3.0) (2023-07-09)
