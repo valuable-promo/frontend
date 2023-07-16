@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     metadataBase: new URL(publicSiteUrl),
     alternates: {
-      canonical: `${publicSiteUrl}/article/${article.attributes.slug}`,
+      canonical: seo.canonicalURL ?? `${publicSiteUrl}/article/${article.attributes.slug}`,
     },
     title: article.attributes.title,
     description: article.attributes.description,

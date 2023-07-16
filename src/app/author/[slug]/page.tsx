@@ -42,8 +42,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const author = await getStrapiAuthor(params.slug);
+  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+    metadataBase: new URL(publicSiteUrl),
+    alternates: {
+      canonical: `${publicSiteUrl}/author/${author.attributes.slug}`,
+    },
     title: author.attributes.name,
   };
 }
