@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/valuable-promo/frontend/compare/v1.0.3...v1.1.0) (2023-07-16)
+
+
+### Features
+
+* adds canonical url for article ([039f306](https://github.com/valuable-promo/frontend/commit/039f306af0f15393407820fe03fc7907d9fd9278))
+
 ### [1.0.3](https://github.com/valuable-promo/frontend/compare/v1.0.2...v1.0.3) (2023-07-14)
 
 
