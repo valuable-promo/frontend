@@ -40,8 +40,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = await getStrapiArticle(params.slug);
   const seo = article.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
+  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+    metadataBase: new URL(publicSiteUrl),
+    alternates: {
+      canonical: `${publicSiteUrl}/article/${article.attributes.slug}`,
+    },
     title: article.attributes.title,
     description: article.attributes.description,
     keywords: seo.keywords,
