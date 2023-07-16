@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/valuable-promo/frontend/compare/v1.1.0...v1.2.0) (2023-07-16)
+
+
+### Features
+
+* improve canonical URL generatioin ([a8709d5](https://github.com/valuable-promo/frontend/commit/a8709d56fd3ee17c8d20a9ebb95320288389d7b6))
+
+
+### Bug Fixes
+
+* missing h1 tag in home page ([9ae3785](https://github.com/valuable-promo/frontend/commit/9ae3785265c7f048b608927b0845748b72c5ca0b))
+
 ## [1.1.0](https://github.com/valuable-promo/frontend/compare/v1.0.3...v1.1.0) (2023-07-16)
 
 
