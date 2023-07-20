@@ -2,7 +2,14 @@ version: '3'
 services:
   frontend:
     container_name: frontend
-    build: .
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_STRAPI_API_URL: 'http://host.docker.internal:1337'
+        NEXT_PUBLIC_STORAGE_HOST: 'valuable-promo-headless-dev.s3.nl-ams.scw.cloud'
+        NEXT_PUBLIC_CA_PUB: 'ca-pub-3656451135676029'
+        NEXT_PUBLIC_SITE_URL: 'http://localhost:3000'
+        NEXT_PUBLIC_SITE_NAME: 'Valueble Promo'
     image: ghcr.io/valuable-promo/frontend:dev
     command: npm run dev
     # docker compose run --rm frontend npm run build
