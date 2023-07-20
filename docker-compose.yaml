@@ -2,13 +2,15 @@ version: '3'
 services:
   frontend:
     container_name: frontend
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
     build:
       context: .
     image: ghcr.io/valuable-promo/frontend:dev
     command: npm run dev
     # docker compose run --rm frontend npm run build
     env_file:
-      - .env.local
+      - .env.development
     ports:
       - '3000:3000'
     volumes:

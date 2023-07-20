@@ -6,6 +6,7 @@ import SharpImage from '@/components/image';
 // types
 import type StrapiAuthor from '@/types/strapi-author';
 import type StrapiArticle from '@/types/strapi-article';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 async function getStrapiAuthor(slug: string) {
   const res = await fetchAPI<StrapiAuthor[]>('/authors', {
@@ -42,7 +43,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const author = await getStrapiAuthor(params.slug);
-  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const publicSiteUrl = getPublicSiteURL();
   return {
     metadataBase: new URL(publicSiteUrl),
     alternates: {

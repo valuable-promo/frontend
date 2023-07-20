@@ -5,6 +5,7 @@ import { fetchAPI } from '@/lib/api';
 // types
 import type StrapiCategory from '@/types/strapi-category';
 import type StrapiArticle from '@/types/strapi-article';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 async function getStrapiCategory(slug: string) {
   const res = await fetchAPI<StrapiCategory[]>('/categories', {
@@ -40,7 +41,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const category = await getStrapiCategory(params.slug);
-  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const publicSiteUrl = getPublicSiteURL();
   return {
     metadataBase: new URL(publicSiteUrl),
     alternates: {

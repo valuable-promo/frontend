@@ -6,7 +6,11 @@ import qs from 'qs';
  * @returns {string} Full Strapi URL
  */
 export function getStrapiURL(path: string = ''): string {
-  return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://host.docker.internal:1337'}${path}`;
+  let host = 'http://host.docker.internal:1337';
+  if (typeof process.env.NEXT_PUBLIC_STRAPI_API_URL === 'string' && process.env.NEXT_PUBLIC_STRAPI_API_URL.length > 0) {
+    host = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  }
+  return `${host}${path}`;
 }
 
 /**

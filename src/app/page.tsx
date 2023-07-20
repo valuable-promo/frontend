@@ -6,12 +6,13 @@ import { getStrapiMedia } from '@/lib/media';
 // types
 import Article from '@/types/strapi-article';
 import Global from '@/types/strapi-global';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { global } = await getData();
   const seo = global.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
-  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const publicSiteUrl = getPublicSiteURL();
   return {
     metadataBase: new URL(publicSiteUrl),
     alternates: {

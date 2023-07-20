@@ -11,6 +11,7 @@ import SharpImage from '@/components/image';
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 interface PageProps {
   params: {
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = await getStrapiArticle(params.slug);
   const seo = article.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
-  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const publicSiteUrl = getPublicSiteURL();
   return {
     metadataBase: new URL(publicSiteUrl),
     alternates: {
@@ -73,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const generateJsonLd = (article: StrapiArticle) => {
-  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const publicSiteUrl = getPublicSiteURL();
   const authors = article.attributes.authors.data;
   const image = getStrapiMedia(article.attributes.image.data);
   const createdAt = moment(article.attributes.createdAt).format('YYYY-MM-DD');

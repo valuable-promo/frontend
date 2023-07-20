@@ -6,6 +6,7 @@ import { getStrapiMedia } from '@/lib/media';
 // types
 import type { Metadata } from 'next';
 import type StrapiPage from '@/types/strapi-page';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 interface PageProps {
   params: {
@@ -35,8 +36,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const entity = await getEntity(params.slug);
   const seo = entity.attributes.seo;
   const image = getStrapiMedia(seo.metaImage.data);
+  const publicSiteUrl = getPublicSiteURL();
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+    metadataBase: new URL(publicSiteUrl),
     title: entity.attributes.title,
     description: entity.attributes.description,
     keywords: seo.keywords,
