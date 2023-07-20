@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/valuable-promo/frontend/compare/v1.2.0...v1.3.0) (2023-07-20)
+
+
+### Features
+
+* adds default fallback envs ([6544e5e](https://github.com/valuable-promo/frontend/commit/6544e5e22b76cbbbfb9abcef0d3def9a4d58601e))
+* improve dev ([dee8c0d](https://github.com/valuable-promo/frontend/commit/dee8c0dd876670fb5d3636b8da2890943a4b18f1))
+* improve dockerization ([abf8afa](https://github.com/valuable-promo/frontend/commit/abf8afae4108eda677b2c8dadf531091faafb3bb))
+* updates dockerfile ([bac7e05](https://github.com/valuable-promo/frontend/commit/bac7e05242c6bb4014061c1918127c9113b84e0e))
+
+
+### Bug Fixes
+
+* typo in dockerfile ([69989a1](https://github.com/valuable-promo/frontend/commit/69989a1549f96fed87d10adb8c4fa4f111c27926))
+
 ## [1.2.0](https://github.com/valuable-promo/frontend/compare/v1.1.0...v1.2.0) (2023-07-16)
 
 
