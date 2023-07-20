@@ -1,17 +1,10 @@
-FROM node:lts-alpine as base
+FROM node:18-alpine AS base
 
-# Prod dependencies
-FROM base AS prodDeps
+# Install dependencies
+FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY --link package.json package-lock.json ./
-RUN npm ci --omit=dev
-
-# Build dependencies
-FROM base AS buildDeps
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY --link package.json package-lock.json ./
+COPY --link package.json package-lock.json* ./
 RUN npm ci
 
 # Rebuild the source code
@@ -26,22 +19,34 @@ ENV NEXT_PUBLIC_STORAGE_HOST ${NEXT_PUBLIC_STORAGE_HOST}
 ENV NEXT_PUBLIC_SITE_NAME ${NEXT_PUBLIC_SITE_NAME}
 ENV NEXT_PUBLIC_SITE_URL ${NEXT_PUBLIC_SITE_URL}
 ENV NEXT_PUBLIC_CA_PUB ${NEXT_PUBLIC_CA_PUB}
-ENV NEXT_TELEMETRY_DISABLED 1
 WORKDIR /app
-COPY --from=buildDeps --link /app/node_modules ./node_modules
+COPY --from=deps --link /app/node_modules ./node_modules
 COPY --link  . .
+ENV NEXT_TELEMETRY_DISABLED 1
 RUN npm run build
 
-# Production image
+# Production image, copy all the files and run next
 FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
-COPY --link  . .
-COPY --from=prodDeps --link /app/node_modules ./node_modules
+
+RUN \
+  addgroup --system --gid 1001 nodejs; \
+  adduser --system --uid 1001 nextjs
+
 COPY --from=builder --link /app/public ./public
-COPY --from=builder --link /app/.next ./.next
-RUN chown -R node:node /app
-USER node
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --link --chown=1001:1001 /app/.next/standalone ./
+COPY --from=builder --link --chown=1001:1001 /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+
+ENV PORT 3000
+ENV HOSTNAME localhost
+
+CMD ["node", "server.js"]
