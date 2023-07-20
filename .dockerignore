@@ -1,2 +1,39 @@
-.env.example
+# Ignore node modules
+**/node_modules
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Ignore build output
+.next
+
+# Ignore configuration files that might contain secrets
+.env
 .env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore sitemaps/robots
+public/robots.txt
+public/sitemap.xml
+public/sitemap*.xml
