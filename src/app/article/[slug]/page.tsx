@@ -73,6 +73,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const generateJsonLd = (article: StrapiArticle) => {
+  const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
   const authors = article.attributes.authors.data;
   const image = getStrapiMedia(article.attributes.image.data);
   const createdAt = moment(article.attributes.createdAt).format('YYYY-MM-DD');
@@ -82,14 +83,15 @@ const generateJsonLd = (article: StrapiArticle) => {
   const authorData = authors.map((author) => {
     return {
       '@type': 'Person',
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/author/${author.attributes.slug}`,
+      url: `${publicSiteUrl}/author/${author.attributes.slug}`,
       name: author.attributes.name,
     };
   });
+  // jsonld
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/article/${article.attributes.slug}`,
+    url: `${publicSiteUrl}/article/${article.attributes.slug}`,
     author: authorData,
     name: article.attributes.title,
     headline: article.attributes.description,
@@ -102,15 +104,15 @@ const generateJsonLd = (article: StrapiArticle) => {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/article/${article.attributes.slug}`,
+      '@id': `${publicSiteUrl}/article/${article.attributes.slug}`,
     },
     publisher: {
       '@type': 'Organization',
       logo: {
         '@type': 'ImageObject',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png`,
+        url: `${publicSiteUrl}/logo.png`,
       },
-      name: process.env.NEXT_PUBLIC_SITE_NAME,
+      name: process.env.NEXT_PUBLIC_SITE_NAME ?? 'Valuable Promo',
     },
 
     datePublished: publishedAt,
