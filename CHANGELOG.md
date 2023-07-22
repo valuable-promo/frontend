@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/valuable-promo/frontend/compare/v1.3.0...v1.3.1) (2023-07-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.16.20 ([#137](https://github.com/valuable-promo/frontend/issues/137)) ([f27abe7](https://github.com/valuable-promo/frontend/commit/f27abe7ae517b20069fa53fac6571224908c4d6d))
+* **deps:** update dependency sharp to v0.32.4 ([#135](https://github.com/valuable-promo/frontend/issues/135)) ([2c2291e](https://github.com/valuable-promo/frontend/commit/2c2291e459c98ab6fe13b6d9681726cccfc40df9))
+* **deps:** update nextjs monorepo to v13.4.11 ([#133](https://github.com/valuable-promo/frontend/issues/133)) ([db4bf29](https://github.com/valuable-promo/frontend/commit/db4bf29287282ba0b638b17e20fe5aeeda2212ea))
+* **deps:** update nextjs monorepo to v13.4.12 ([#136](https://github.com/valuable-promo/frontend/issues/136)) ([aed254e](https://github.com/valuable-promo/frontend/commit/aed254e211078d41faf78fcf36c5bbd7b9fb504c))
+
 ## [1.3.0](https://github.com/valuable-promo/frontend/compare/v1.2.0...v1.3.0) (2023-07-20)
 
 
