@@ -68,7 +68,7 @@ async function getData() {
 export default async function Page() {
   const { articles, global } = await getData();
   return (
-    <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+    <div className="relative bg-gray-50 px-6 pt-3 pb-3 lg:px-8 lg:pt-5 lg:pb-5">
       <div className="absolute inset-0">
         <div className="h-1/3 bg-white sm:h-2/3" />
       </div>
