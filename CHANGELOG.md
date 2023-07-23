@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/valuable-promo/frontend/compare/v1.4.0...v1.5.0) (2023-07-23)
+
+
+### Features
+
+* revalidate authors when revalidating article ([269e4a6](https://github.com/valuable-promo/frontend/commit/269e4a643839f68e8df01b3b1a7afca3c4f4865c))
+
 ## [1.4.0](https://github.com/valuable-promo/frontend/compare/v1.3.1...v1.4.0) (2023-07-23)
 
 
