@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/valuable-promo/frontend/compare/v1.3.1...v1.4.0) (2023-07-23)
+
+
+### Features
+
+* adds author title & bio ([b01d51d](https://github.com/valuable-promo/frontend/commit/b01d51deba9bdcdb8456b098af588956a3ca73c4))
+* ignores CDN path in robots.txt ([b37acc9](https://github.com/valuable-promo/frontend/commit/b37acc9becf030a2c07036dcc0c01ea3f7d00ed7))
+
 ### [1.3.1](https://github.com/valuable-promo/frontend/compare/v1.3.0...v1.3.1) (2023-07-22)
 
 
