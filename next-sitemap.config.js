@@ -3,6 +3,15 @@ const { readFile } = require('fs/promises');
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
   generateRobotsTxt: true,
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/cdn-cgi/'],
+      },
+    ],
+  },
   sitemapSize: 5000,
   exclude: ['/', '/cookie', '/disclaimer', '/privacy', '/terms'],
   transform: async (config, path) => {
