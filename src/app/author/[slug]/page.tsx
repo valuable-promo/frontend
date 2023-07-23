@@ -50,6 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `${publicSiteUrl}/author/${author.attributes.slug}`,
     },
     title: author.attributes.name,
+    description: author.attributes.biography,
   };
 }
 
@@ -70,6 +71,8 @@ const Page = async ({ params }: PageProps) => {
             <SharpImage image={author.attributes.avatar} fortmat="thumbnail" classes="mx-auto h-24 w-24 rounded-full" />
           </p>
           <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-600 sm:text-6xl">{author.attributes.name}</h1>
+          <p className="mt-2 text-xl text-gray-400">{author.attributes.title}</p>
+          <p className="mt-2 text-xl text-gray-500">{author.attributes.biography}</p>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">

@@ -6,6 +6,8 @@ type StrapiAuthor = {
   attributes: {
     name: string;
     slug: string;
+    title?: string;
+    biography?: string;
     facebook?: string;
     twitter?: string;
     linkedin?: string;
