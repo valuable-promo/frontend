@@ -1,5 +1,6 @@
 import { fetchAPI } from '@/lib/api';
 import StrapiArticle from '@/types/strapi-article';
+import StrapiAuthor from '@/types/strapi-author';
 import StrapiCategory from '@/types/strapi-category';
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -30,15 +31,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           filters: {
             slug: entry.slug,
           },
-          populate: ['categories'],
+          populate: ['categories', 'authors'],
         });
 
         const article = atrapiRes.data[0];
         const categories = article.attributes.categories;
+        const authors = article.attributes.authors;
         await Promise.all([
           res.revalidate('/'),
           res.revalidate(`/article/${entry.slug}`),
           ...categories.data.map((category: StrapiCategory) => res.revalidate(`/category/${category.attributes.slug}`)),
+          ...authors.data.map((author: StrapiAuthor) => res.revalidate(`/author/${author.attributes.slug}`)),
         ]);
       }
       if (model === 'author') {
