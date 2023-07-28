@@ -48,6 +48,10 @@ async function getData() {
     fetchAPI<Article[]>('/articles', {
       populate: ['image', 'categories', 'authors.avatar'],
       sort: 'createdAt:DESC',
+      pagination: {
+        page: 1,
+        pageSize: 12,
+      },
     }),
     fetchAPI<Global>('/global', {
       populate: {
