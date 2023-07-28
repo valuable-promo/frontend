@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
     <article key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
       <div className="flex-shrink-0">
         <Link href={`/article/${article.attributes.slug}`}>
-          <SharpImage image={article.attributes.image} classes="h-48 w-full object-cover" fortmat="medium" />
+          <SharpImage image={article.attributes.image} classes="h-48 w-full object-cover" fortmat="small" />
         </Link>
       </div>
       <div className="flex flex-1 flex-col justify-between bg-white p-6">
