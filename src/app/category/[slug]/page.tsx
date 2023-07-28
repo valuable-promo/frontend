@@ -28,6 +28,10 @@ async function getStrapiArticles(categorySlug: string) {
       },
     },
     sort: 'createdAt:DESC',
+    pagination: {
+      page: 1,
+      pageSize: 12,
+    },
   });
   return res.data;
 }
