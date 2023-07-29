@@ -1,5 +1,5 @@
 // local
-import { getStrapiURL } from './api';
+import { getStrapiURL } from '@/lib/hepler';
 // types
 import { StrapiImage, ImageFormat } from '@/types/strapi-media';
 

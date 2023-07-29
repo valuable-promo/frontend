@@ -1,17 +1,9 @@
+// types
+import Article from '@/types/strapi-article';
+// packages
 import qs from 'qs';
-
-/**
- * Get full Strapi URL from path
- * @param {string} path Path of the URL
- * @returns {string} Full Strapi URL
- */
-export function getStrapiURL(path: string = ''): string {
-  let host = 'http://host.docker.internal:1337';
-  if (typeof process.env.NEXT_PUBLIC_STRAPI_API_URL === 'string' && process.env.NEXT_PUBLIC_STRAPI_API_URL.length > 0) {
-    host = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  }
-  return `${host}${path}`;
-}
+// local
+import { getStrapiURL } from '@/lib/hepler';
 
 /**
  * Helper to make GET requests to Strapi API endpoints
@@ -24,7 +16,16 @@ export async function fetchAPI<T>(
   path: string,
   urlParamsObject: object = {},
   options: object = {}
-): Promise<{ data: T }> {
+): Promise<{
+  data: T;
+  meta: {
+    pagination: {
+      start: number;
+      limit: number;
+      total: number;
+    };
+  };
+}> {
   // Merge default and user options
   const mergedOptions = {
     headers: {
@@ -45,6 +46,22 @@ export async function fetchAPI<T>(
     console.error(response.statusText);
     throw new Error(`An error occured please try again`);
   }
-  const data = await response.json();
-  return data as { data: T };
+  const res = await response.json();
+  return {
+    data: res.data,
+    meta: res.meta,
+  };
+}
+
+export async function getArticles(start: number, limit: number, filters: any = {}) {
+  const res = fetchAPI<Article[]>('/articles', {
+    populate: ['image', 'categories', 'authors.avatar'],
+    filters: filters,
+    sort: 'createdAt:DESC',
+    pagination: {
+      start,
+      limit,
+    },
+  });
+  return res;
 }

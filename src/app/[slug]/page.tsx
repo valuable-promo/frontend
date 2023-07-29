@@ -3,10 +3,10 @@ import ReactMarkdown from 'react-markdown';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
-// types
-import type { Metadata } from 'next';
-import type StrapiPage from '@/types/strapi-page';
 import { getPublicSiteURL } from '@/lib/hepler';
+// types
+import type StrapiPage from '@/types/strapi-page';
+import type { Metadata } from 'next';
 
 interface PageProps {
   params: {
@@ -69,27 +69,25 @@ const Page = async ({ params }: PageProps) => {
   const entity = await getEntity(params.slug);
   const { title, content, publishedAt } = entity.attributes;
   return (
-    <div className="">
-      <div className="bg-white py-32 px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
-          <div>
-            <div className="mt-6 flex items-center">
-              <div className="flex-shrink-0">
-                <div className="isolate flex -space-x-1 overflow-hidden">Last updated</div>
-              </div>
+    <div className="bg-gray-100 py-32 px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
+        <div>
+          <div className="mt-6 flex items-center">
+            <div className="flex-shrink-0">
+              <div className="isolate flex -space-x-1 overflow-hidden">Last updated</div>
+            </div>
 
-              <div className="ml-3">
-                <div className="flex space-x-1 text-sm text-gray-500">
-                  <time dateTime={publishedAt}>{moment(publishedAt).format('MMM Do YYYY')}</time>
-                </div>
+            <div className="ml-3">
+              <div className="flex space-x-1 text-sm text-gray-500">
+                <time dateTime={publishedAt}>{moment(publishedAt).format('MMM Do YYYY')}</time>
               </div>
             </div>
           </div>
-          <article className="prose lg:prose-xl">
-            <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
-          </article>
         </div>
+        <article className="prose lg:prose-xl">
+          <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
+        </article>
       </div>
     </div>
   );

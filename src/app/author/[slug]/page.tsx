@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 // local
 import Card from '@/components/card';
-import { fetchAPI } from '@/lib/api';
 import SharpImage from '@/components/image';
+import MoreArticle from '@/components/more-article';
+import { fetchAPI, getArticles } from '@/lib/api';
 // types
 import type StrapiAuthor from '@/types/strapi-author';
-import type StrapiArticle from '@/types/strapi-article';
 import { getPublicSiteURL } from '@/lib/hepler';
 
 async function getStrapiAuthor(slug: string) {
@@ -17,25 +17,6 @@ async function getStrapiAuthor(slug: string) {
   });
 
   return res.data[0];
-}
-
-async function getStrapiArticles(authorSlug: string) {
-  const res = await fetchAPI<StrapiArticle[]>('/articles', {
-    populate: ['image', 'categories', 'authors.avatar'],
-    filters: {
-      authors: {
-        slug: {
-          $eqi: authorSlug,
-        },
-      },
-    },
-    sort: 'createdAt:DESC',
-    pagination: {
-      page: 1,
-      pageSize: 12,
-    },
-  });
-  return res.data;
 }
 
 export async function generateStaticParams() {
@@ -65,10 +46,18 @@ interface PageProps {
 }
 
 const Page = async ({ params }: PageProps) => {
+  const limit = parseInt(process.env.NEXT_PUBLIC_PAGE_SIZE ?? '12');
   const author = await getStrapiAuthor(params.slug);
-  const articles = await getStrapiArticles(params.slug);
+  const { data, meta } = await getArticles(0, limit, {
+    authors: {
+      slug: {
+        $eqi: params.slug,
+      },
+    },
+  });
+
   return (
-    <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+    <div className="relative bg-gray-100 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="relative mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-base font-semibold leading-7 text-indigo-600">
@@ -79,10 +68,11 @@ const Page = async ({ params }: PageProps) => {
           <p className="mt-2 text-xl text-gray-500">{author.attributes.biography}</p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-          {articles.map((article) => {
+        <div className="mx-auto max-w-none mt-12 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {data.map((article) => {
             return <Card article={article} key={article.attributes.slug} />;
           })}
+          <MoreArticle total={meta.pagination.total} filter={{ by: 'author', slug: params.slug }} />
         </div>
       </div>
     </div>
