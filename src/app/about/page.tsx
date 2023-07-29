@@ -7,6 +7,8 @@ import { fetchAPI } from '@/lib/api';
 // types
 import StrapiContributor from '@/types/strapi-contributor';
 import StrapiAbout from '@/types/strapi-about';
+import { Metadata } from 'next';
+import { getPublicSiteURL } from '@/lib/hepler';
 
 async function getPeople() {
   const res = await fetchAPI<StrapiContributor[]>('/contributors', {
@@ -17,9 +19,22 @@ async function getPeople() {
 
 async function getAbout() {
   const res = await fetchAPI<StrapiAbout>('/about', {
-    populate: ['image'],
+    populate: ['image', 'seo'],
   });
   return res.data;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const about = await getAbout();
+  const publicSiteUrl = getPublicSiteURL();
+  return {
+    metadataBase: new URL(publicSiteUrl),
+    alternates: {
+      canonical: `${publicSiteUrl}/about`,
+    },
+    title: about.attributes.seo.metaTitle,
+    description: about.attributes.seo.metaDescription,
+  };
 }
 
 const Page = async () => {
