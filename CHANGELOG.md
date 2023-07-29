@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.3](https://github.com/valuable-promo/frontend/compare/v1.6.2...v1.6.3) (2023-07-29)
+
+
+### Bug Fixes
+
+* missing description in about page ([bb43814](https://github.com/valuable-promo/frontend/commit/bb4381447c89c6cb177f12f1430b05e6050f4eff))
+
 ### [1.6.2](https://github.com/valuable-promo/frontend/compare/v1.6.1...v1.6.2) (2023-07-28)
 
 ### [1.6.1](https://github.com/valuable-promo/frontend/compare/v1.6.0...v1.6.1) (2023-07-28)
