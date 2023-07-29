@@ -8,6 +8,7 @@ on:
       - 'docker-compose.yml'
 jobs:
   test:
+    if: "!startsWith(github.ref, 'refs/tags/')" # Don't run on tags
     uses: ./.github/workflows/testing.yaml
   build:
     needs: test
