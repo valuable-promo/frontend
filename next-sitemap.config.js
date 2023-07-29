@@ -13,7 +13,17 @@ module.exports = {
     ],
   },
   sitemapSize: 5000,
-  exclude: ['/', '/cookie', '/disclaimer', '/privacy', '/terms'],
+  exclude: [
+    '/',
+    '/cookie',
+    '/disclaimer',
+    '/privacy',
+    '/terms',
+    '/icon.png',
+    '/icon2.png',
+    '/icon.png',
+    '/apple-icon.png',
+  ],
   transform: async (config, path) => {
     const base = {
       loc: path,
