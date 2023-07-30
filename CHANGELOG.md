@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/valuable-promo/frontend/compare/v1.7.1...v1.7.2) (2023-07-30)
+
+
+### Bug Fixes
+
+* css and docker env ([a7c30be](https://github.com/valuable-promo/frontend/commit/a7c30bec94e025ca97573b467b50174e3a1bec0a))
+
 ### [1.7.1](https://github.com/valuable-promo/frontend/compare/v1.7.0...v1.7.1) (2023-07-30)
 
 
