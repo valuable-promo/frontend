@@ -57,7 +57,7 @@ const Page = async ({ params }: PageProps) => {
   });
 
   return (
-    <div className="relative bg-gray-100 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+    <div className="relative bg-gray-100 px-6 lg:px-8 py-16">
       <div className="relative mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-base font-semibold leading-7 text-indigo-600">

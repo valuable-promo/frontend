@@ -62,7 +62,7 @@ export default async function Page() {
   const { data, meta } = await getArticles(start, limit);
 
   return (
-    <div className="relative bg-gray-100 px-6 py-3 lg:px-8 lg:pt-6 lg:pb-10">
+    <div className="relative bg-gray-100 px-6 lg:px-8 py-16">
       <div className="text-center">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{global.attributes.siteName}</h1>
         <p>{global.attributes.slogan}</p>

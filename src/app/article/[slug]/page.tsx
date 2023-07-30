@@ -128,71 +128,69 @@ const Page = async ({ params }: PageProps) => {
   const authors = article.attributes.authors.data;
   const jsonld = generateJsonLd(article);
   return (
-    <div className="">
-      <div className="bg-gray-100 py-32 px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
-          <div>
-            <div className="mt-6 flex items-center">
-              <div className="flex-shrink-0">
-                <div className="isolate flex -space-x-1 overflow-hidden">
-                  {authors.map((author) => {
-                    return (
-                      <Link href={`/author/${author.attributes.slug}`} key={author.id}>
-                        <SharpImage
-                          priority
-                          image={author.attributes.avatar}
-                          fortmat="thumbnail"
-                          classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
-                        />
-                      </Link>
-                    );
-                  })}
-                </div>
+    <div className="bg-gray-100 px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
+        <div>
+          <div className="mt-6 flex items-center">
+            <div className="flex-shrink-0">
+              <div className="isolate flex -space-x-1 overflow-hidden">
+                {authors.map((author) => {
+                  return (
+                    <Link href={`/author/${author.attributes.slug}`} key={author.id}>
+                      <SharpImage
+                        priority
+                        image={author.attributes.avatar}
+                        fortmat="thumbnail"
+                        classes="relative z-30 inline-block rounded-full ring-2 ring-white h-10 w-10"
+                      />
+                    </Link>
+                  );
+                })}
               </div>
+            </div>
 
-              <div className="ml-3">
-                <p className="text-sm font-medium text-gray-900">
-                  {authors.map((author, i) => {
-                    return (
-                      <span key={author.id}>
-                        {i > 0 ? ', ' : ''}
-                        <Link href={`/author/${author.attributes.slug}`}>{author.attributes.name}</Link>
-                      </span>
-                    );
-                  })}
-                </p>
-                <div className="flex space-x-1 text-sm text-gray-500">
-                  <time dateTime={publishedAt}>{moment(publishedAt).format('MMM Do YYYY')}</time>
-                </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-gray-900">
+                {authors.map((author, i) => {
+                  return (
+                    <span key={author.id}>
+                      {i > 0 ? ', ' : ''}
+                      <Link href={`/author/${author.attributes.slug}`}>{author.attributes.name}</Link>
+                    </span>
+                  );
+                })}
+              </p>
+              <div className="flex space-x-1 text-sm text-gray-500">
+                <time dateTime={publishedAt}>{moment(publishedAt).format('MMM Do YYYY')}</time>
               </div>
             </div>
           </div>
-          <div className="text-sm font-medium text-indigo-600 mt-5 mb-5">
-            {article.attributes.categories.data.map((category) => {
-              return (
-                <span
-                  key={category.attributes.slug}
-                  className="inline-flex items-center rounded-md bg-purple-50 hover:bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 hover:text-purple-600 ring-1 ring-inset ring-purple-700/10"
-                >
-                  <Link href={`/category/${category.attributes.slug}`}> {category.attributes.name}</Link>
-                </span>
-              );
-            })}
-          </div>
-          <article className="prose lg:prose-xl">
-            <p className="mt-6 text-xl leading-8">{article.attributes.description}</p>
-            <figure className="mt-16">
-              <SharpImage image={article.attributes.image} classes="rounded-md bg-gray-50 object-cover" />
-              <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
-                <InformationCircleIcon className="mt-0.5 h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
-                {article.attributes.image.data.attributes.caption}
-              </figcaption>
-            </figure>
-            <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
-          </article>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }} />
         </div>
+        <div className="text-sm font-medium text-indigo-600 mt-5 mb-5">
+          {article.attributes.categories.data.map((category) => {
+            return (
+              <span
+                key={category.attributes.slug}
+                className="inline-flex items-center rounded-md bg-purple-50 hover:bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 hover:text-purple-600 ring-1 ring-inset ring-purple-700/10"
+              >
+                <Link href={`/category/${category.attributes.slug}`}> {category.attributes.name}</Link>
+              </span>
+            );
+          })}
+        </div>
+        <article className="prose lg:prose-xl">
+          <p className="mt-6 text-xl leading-8">{article.attributes.description}</p>
+          <figure className="mt-16">
+            <SharpImage image={article.attributes.image} classes="rounded-md bg-gray-50 object-cover" />
+            <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+              <InformationCircleIcon className="mt-0.5 h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
+              {article.attributes.image.data.attributes.caption}
+            </figcaption>
+          </figure>
+          <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
+        </article>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }} />
       </div>
     </div>
   );
