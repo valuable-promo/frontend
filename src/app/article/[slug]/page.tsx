@@ -129,7 +129,7 @@ const Page = async ({ params }: PageProps) => {
   const jsonld = generateJsonLd(article);
   return (
     <div className="">
-      <div className="bg-white py-32 px-6 lg:px-8">
+      <div className="bg-gray-100 py-32 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
           <div>
@@ -173,7 +173,7 @@ const Page = async ({ params }: PageProps) => {
               return (
                 <span
                   key={category.attributes.slug}
-                  className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100 mr-2 last:mr-0"
+                  className="inline-flex items-center rounded-md bg-purple-50 hover:bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 hover:text-purple-600 ring-1 ring-inset ring-purple-700/10"
                 >
                   <Link href={`/category/${category.attributes.slug}`}> {category.attributes.name}</Link>
                 </span>
