@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.4](https://github.com/valuable-promo/frontend/compare/v1.7.3...v1.7.4) (2023-08-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.46.0 ([#143](https://github.com/valuable-promo/frontend/issues/143)) ([94de155](https://github.com/valuable-promo/frontend/commit/94de15544bf1e29f5b1be0addc2ebbefa8312762))
+* mobile menu not closing after items clicked ([75bf9da](https://github.com/valuable-promo/frontend/commit/75bf9daf66071082f3ab95ff364fa839312317cc))
+* small UI issue ([01b896f](https://github.com/valuable-promo/frontend/commit/01b896f8521d91c464f571b7c62c9f383331c73b))
+
 ### [1.7.3](https://github.com/valuable-promo/frontend/compare/v1.7.2...v1.7.3) (2023-07-30)
 
 
