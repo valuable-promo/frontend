@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/valuable-promo/frontend/compare/v1.7.4...v1.8.0) (2023-08-06)
+
+
+### Features
+
+* adds seach box ([2e68aaf](https://github.com/valuable-promo/frontend/commit/2e68aafd4985a8dfc217dce8f1d8ae61f6d79de7))
+
 ### [1.7.4](https://github.com/valuable-promo/frontend/compare/v1.7.3...v1.7.4) (2023-08-06)
 
 
