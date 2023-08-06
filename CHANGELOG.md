@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/valuable-promo/frontend/compare/v1.8.0...v1.9.0) (2023-08-06)
+
+
+### Features
+
+* adds google adsense ([424cbab](https://github.com/valuable-promo/frontend/commit/424cbab3128f5d0e0ba2e29971ce7b3d2604e072))
+
+
+### Bug Fixes
+
+* rm unused ads pros ([98b164f](https://github.com/valuable-promo/frontend/commit/98b164f68e26069c531fc848737e46ae9f9c6811))
+
 ## [1.8.0](https://github.com/valuable-promo/frontend/compare/v1.7.4...v1.8.0) (2023-08-06)
 
 
