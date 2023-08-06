@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
-import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 // local
 import StrapiImage from '@/components/image';
@@ -28,6 +28,7 @@ const navigation = [
 
 const Header = ({ global, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [catPopoverClosed, setCatPopoverClosed] = useState(true);
   const cats = categories.map((category) => ({
     name: category.attributes.name,
     href: `/category/${category.attributes.slug}`,
@@ -59,7 +60,6 @@ const Header = ({ global, categories }: HeaderProps) => {
               Categories
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
-
             <Transition
               as={Fragment}
               enter="transition ease-out duration-200"
@@ -70,15 +70,20 @@ const Header = ({ global, categories }: HeaderProps) => {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
-                {cats.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {({ close }) => (
+                  <>
+                    {cats.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
+                        onClick={() => close()}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </>
+                )}
               </Popover.Panel>
             </Transition>
           </Popover>
