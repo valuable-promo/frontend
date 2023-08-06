@@ -3,13 +3,14 @@
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 // local
 import StrapiImage from '@/components/image';
 // types
 import type StrapiGlobal from '@/types/strapi-global';
 import type StrapiCategory from '@/types/strapi-category';
+import SearchBox from './search-box';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -40,6 +41,7 @@ const Header = ({ global, categories }: HeaderProps) => {
             <span className="sr-only">{global.attributes.siteName}</span>
             <StrapiImage image={global.attributes.favicon} classes="h-8 w-auto" />
           </Link>
+          <SearchBox />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -80,7 +82,6 @@ const Header = ({ global, categories }: HeaderProps) => {
               </Popover.Panel>
             </Transition>
           </Popover>
-
           {navigation.map((item) => (
             <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
               {item.name}
