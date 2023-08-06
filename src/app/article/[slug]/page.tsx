@@ -6,12 +6,13 @@ import { InformationCircleIcon } from '@heroicons/react/20/solid';
 // local
 import { fetchAPI } from '@/lib/api';
 import { getStrapiMedia } from '@/lib/media';
+import { getPublicSiteURL } from '@/lib/hepler';
 import SharpImage from '@/components/image';
+import Ads from '@/components/ads';
 
 // types
 import type StrapiArticle from '@/types/strapi-article';
 import type { Metadata } from 'next';
-import { getPublicSiteURL } from '@/lib/hepler';
 
 interface PageProps {
   params: {
@@ -188,7 +189,9 @@ const Page = async ({ params }: PageProps) => {
               {article.attributes.image.data.attributes.caption}
             </figcaption>
           </figure>
+          <Ads />
           <ReactMarkdown className="mt-6 text-xl leading-8 markdown">{content}</ReactMarkdown>
+          <Ads />
         </article>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }} />
       </div>

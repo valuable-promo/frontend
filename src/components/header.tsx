@@ -7,10 +7,10 @@ import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/o
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 // local
 import StrapiImage from '@/components/image';
+import SearchBox from '@/components/search-box';
 // types
 import type StrapiGlobal from '@/types/strapi-global';
 import type StrapiCategory from '@/types/strapi-category';
-import SearchBox from './search-box';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');

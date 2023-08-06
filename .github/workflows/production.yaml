@@ -40,6 +40,8 @@ jobs:
             NEXT_PUBLIC_SITE_URL=${{ vars.NEXT_PUBLIC_SITE_URL }}
             NEXT_PUBLIC_PAGE_SIZE=${{ vars.NEXT_PUBLIC_PAGE_SIZE }}
             NEXT_PUBLIC_CSE_ID=${{ vars.NEXT_PUBLIC_CSE_ID }}
+            NEXT_PUBLIC_ARTICLE_ADS_SLOT=${{ vars.NEXT_PUBLIC_ARTICLE_ADS_SLOT }}
+            NEXT_PUBLIC_CA_PUB=${{ vars.NEXT_PUBLIC_CA_PUB }}
           platforms: linux/arm64,linux/amd64
           push: true
           tags: ghcr.io/${{github.repository}}:${{github.ref_name}},ghcr.io/${{github.repository}}:latest
