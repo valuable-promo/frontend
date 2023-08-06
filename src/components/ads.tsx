@@ -2,9 +2,7 @@
 import Script from 'next/script';
 import { useEffect } from 'react';
 
-type Ads = {};
-
-const Ads: React.FC<Ads> = () => {
+const Ads: React.FC = () => {
   const caPub = process.env.NEXT_PUBLIC_CA_PUB ?? '';
   const adsSlot = process.env.NEXT_PUBLIC_ADS_SLOT ?? '';
   const scriptUrl = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js`;
