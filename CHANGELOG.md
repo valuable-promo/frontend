@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/valuable-promo/frontend/compare/v1.9.2...v1.9.3) (2023-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency next-sitemap to v4.2.2 ([#153](https://github.com/valuable-promo/frontend/issues/153)) ([aa330f5](https://github.com/valuable-promo/frontend/commit/aa330f5aae4b9b4e0c7ec71df60256a34a3f676d))
+* **deps:** update nextjs monorepo to v13.4.13 ([#150](https://github.com/valuable-promo/frontend/issues/150)) ([4656349](https://github.com/valuable-promo/frontend/commit/4656349fe7a649dcbba1d96a7ffeb4ca8d62f57e))
+
 ### [1.9.2](https://github.com/valuable-promo/frontend/compare/v1.9.1...v1.9.2) (2023-08-06)
 
 
