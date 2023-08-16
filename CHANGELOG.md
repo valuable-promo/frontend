@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.4](https://github.com/valuable-promo/frontend/compare/v1.9.3...v1.9.4) (2023-08-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.47.0 ([#155](https://github.com/valuable-promo/frontend/issues/155)) ([e33ff28](https://github.com/valuable-promo/frontend/commit/e33ff2865a6385ff50257ed767be0e961269dee8))
+* **deps:** update dependency sharp to v0.32.5 ([#162](https://github.com/valuable-promo/frontend/issues/162)) ([7d22f19](https://github.com/valuable-promo/frontend/commit/7d22f193b24cd1178dcacbb3c730043fbb39f998))
+* **deps:** update nextjs monorepo to v13.4.15 ([#159](https://github.com/valuable-promo/frontend/issues/159)) ([da6656b](https://github.com/valuable-promo/frontend/commit/da6656b058d478d7e0bc68843b74ab51c5cbba91))
+* **deps:** update nextjs monorepo to v13.4.16 ([#160](https://github.com/valuable-promo/frontend/issues/160)) ([cc03740](https://github.com/valuable-promo/frontend/commit/cc03740b2a6d215992db6b553dd7a62ca009463d))
+
 ### [1.9.3](https://github.com/valuable-promo/frontend/compare/v1.9.2...v1.9.3) (2023-08-13)
 
 
