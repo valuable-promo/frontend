@@ -27,7 +27,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@types/qs": "^6.9.7",
-    "@headlessui/react": "1.7.16",
+    "@headlessui/react": "1.7.17",
     "@heroicons/react": "2.0.18",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
