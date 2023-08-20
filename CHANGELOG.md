@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/valuable-promo/frontend/compare/v1.9.4...v1.10.0) (2023-08-20)
+
+
+### Features
+
+* removes next-sitemap, uses in-house logic ([da050f2](https://github.com/valuable-promo/frontend/commit/da050f237c28c238ced6eed9e1a774acc1e3dcc0))
+
+
+### Bug Fixes
+
+* **deps:** update nextjs monorepo to v13.4.16 ([#163](https://github.com/valuable-promo/frontend/issues/163)) ([77b38e8](https://github.com/valuable-promo/frontend/commit/77b38e8a5d4cc91137172b92c755e1343fe32511))
+* **deps:** update nextjs monorepo to v13.4.17 ([#164](https://github.com/valuable-promo/frontend/issues/164)) ([2e5c12c](https://github.com/valuable-promo/frontend/commit/2e5c12c68a1646b8678a6642bbe03317238af213))
+* **deps:** update nextjs monorepo to v13.4.18 ([#166](https://github.com/valuable-promo/frontend/issues/166)) ([92a7e9e](https://github.com/valuable-promo/frontend/commit/92a7e9e14c74db9888123ee8c621e69b5806f84e))
+* **deps:** update nextjs monorepo to v13.4.19 ([#168](https://github.com/valuable-promo/frontend/issues/168)) ([78de107](https://github.com/valuable-promo/frontend/commit/78de107337b170b7254309916526a904bbd6a5db))
+
 ### [1.9.4](https://github.com/valuable-promo/frontend/compare/v1.9.3...v1.9.4) (2023-08-16)
 
 
