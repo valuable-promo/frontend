@@ -39,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const authors = article.attributes.authors;
         await Promise.all([
           res.revalidate('/'),
+          res.revalidate('/sitemap.xml'),
           res.revalidate(`/article/${entry.slug}`),
           ...categories.data.map((category: StrapiCategory) => res.revalidate(`/category/${category.attributes.slug}`)),
           ...authors.data.map((author: StrapiAuthor) => res.revalidate(`/author/${author.attributes.slug}`)),
