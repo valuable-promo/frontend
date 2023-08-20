@@ -17,6 +17,9 @@ type StrapiAuthor = {
     articles: {
       data: StrapiArticle[];
     };
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
   };
 };
 
