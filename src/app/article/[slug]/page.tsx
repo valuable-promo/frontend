@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: seo.canonicalURL ?? `${publicSiteUrl}/article/${article.attributes.slug}`,
     },
-    title: article.attributes.title,
+    title: 'article.attributes.title',
     description: article.attributes.description,
     keywords: seo.keywords,
     openGraph: {

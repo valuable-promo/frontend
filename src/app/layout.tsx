@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       default: global.attributes.siteName,
-      template: `%s | ${global.attributes.siteName}`,
+      template: `%s`,
     },
   };
 }

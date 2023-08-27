@@ -28,7 +28,6 @@ const navigation = [
 
 const Header = ({ global, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [catPopoverClosed, setCatPopoverClosed] = useState(true);
   const cats = categories.map((category) => ({
     name: category.attributes.name,
     href: `/category/${category.attributes.slug}`,
