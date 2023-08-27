@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.3](https://github.com/valuable-promo/frontend/compare/v1.10.2...v1.10.3) (2023-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.48.0 ([#175](https://github.com/valuable-promo/frontend/issues/175)) ([ca3673b](https://github.com/valuable-promo/frontend/commit/ca3673bf504892749778c48d26979593c10d08a0))
+* **deps:** update dependency typescript to v5.2.2 ([#173](https://github.com/valuable-promo/frontend/issues/173)) ([840777a](https://github.com/valuable-promo/frontend/commit/840777af86e5a999938c6079f36244f1a5e2ada7))
+* removes title hard coded ([d8d3424](https://github.com/valuable-promo/frontend/commit/d8d3424411de663d35158a3821e7fc94250cd375))
+
 ### [1.10.2](https://github.com/valuable-promo/frontend/compare/v1.10.1...v1.10.2) (2023-08-23)
 
 ### [1.10.1](https://github.com/valuable-promo/frontend/compare/v1.10.0...v1.10.1) (2023-08-20)
