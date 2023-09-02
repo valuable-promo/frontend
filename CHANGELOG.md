@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/valuable-promo/frontend/compare/v1.10.4...v1.11.0) (2023-09-02)
+
+
+### Features
+
+* improve SEO ([6828e50](https://github.com/valuable-promo/frontend/commit/6828e501e2f256ad36a405ebd44ac5de0aff38ce))
+
 ### [1.10.4](https://github.com/valuable-promo/frontend/compare/v1.10.3...v1.10.4) (2023-09-02)
 
 
