@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Fragment, useState } from 'react';
+import { Fragment, Suspense, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
@@ -26,6 +26,10 @@ const navigation = [
   { name: 'About', href: '/about' },
 ];
 
+const SearchBoxFallback = () => {
+  return <>Seach</>;
+};
+
 const Header = ({ global, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cats = categories.map((category) => ({
@@ -41,7 +45,10 @@ const Header = ({ global, categories }: HeaderProps) => {
             <span className="sr-only">{global.attributes.siteName}</span>
             <StrapiImage image={global.attributes.favicon} classes="h-8 w-auto" />
           </Link>
-          <SearchBox />
+          <Suspense fallback={<SearchBoxFallback />}>
+            <SearchBox />
+          </Suspense>
+          {/* <SearchBox /> */}
         </div>
         <div className="flex lg:hidden">
           <button
