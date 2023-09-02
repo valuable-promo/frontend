@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.4](https://github.com/valuable-promo/frontend/compare/v1.10.3...v1.10.4) (2023-09-02)
+
+
+### Bug Fixes
+
+* page deopted ([2e3dd56](https://github.com/valuable-promo/frontend/commit/2e3dd56fd9697b620b109df2dcea8837205f9b25))
+
 ### [1.10.3](https://github.com/valuable-promo/frontend/compare/v1.10.2...v1.10.3) (2023-08-27)
 
 
