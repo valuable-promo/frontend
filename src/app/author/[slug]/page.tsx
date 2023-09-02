@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `${publicSiteUrl}/author/${author.attributes.slug}`,
     },
-    title: author.attributes.name,
+    title: `${author.attributes.name} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: author.attributes.biography,
   };
 }

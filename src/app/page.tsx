@@ -18,10 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: publicSiteUrl,
     },
+    title: `${global.attributes.siteName} | ${global.attributes.slogan}`,
     description: seo.metaDescription,
     keywords: seo.keywords,
     openGraph: {
-      title: global.attributes.siteName,
+      title: `${global.attributes.siteName}`,
       description: seo.metaDescription,
       siteName: global.attributes.siteName,
       images: [

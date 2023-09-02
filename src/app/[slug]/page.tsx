@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const publicSiteUrl = getPublicSiteURL();
   return {
     metadataBase: new URL(publicSiteUrl),
-    title: entity.attributes.title,
+    title: `${entity.attributes.title} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: entity.attributes.description,
     keywords: seo.keywords,
     openGraph: {

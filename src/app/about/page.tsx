@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: `${publicSiteUrl}/about`,
     },
-    title: about.attributes.seo.metaTitle,
+    title: `${about.attributes.seo.metaTitle} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: about.attributes.seo.metaDescription,
   };
 }

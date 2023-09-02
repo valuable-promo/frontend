@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `${publicSiteUrl}/category/${category.attributes.slug}`,
     },
-    title: category.attributes.name,
+    title: `${category.attributes.name} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: category.attributes.description,
   };
 }
