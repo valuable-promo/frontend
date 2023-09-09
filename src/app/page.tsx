@@ -61,7 +61,6 @@ export default async function Page() {
   const limit = parseInt(process.env.NEXT_PUBLIC_PAGE_SIZE ?? '12');
   const global = await getGlobal();
   const { data, meta } = await getArticles(start, limit);
-
   return (
     <div className="relative bg-gray-100 px-6 lg:px-8 py-16">
       <div className="text-center">

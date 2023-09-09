@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // articles
   const articleRes = await fetchAPI<Article[]>('/articles', {
     sort: 'createdAt:DESC',
-    fields: 'slug,updatedAt',
+    fields: ['slug', 'updatedAt'],
     pagination: {
       start: 0,
       limit: sitemapSize,
@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // authors
   const authorRes = await fetchAPI<Author[]>('/authors', {
     sort: 'createdAt:DESC',
-    fields: 'slug,updatedAt',
+    fields: ['slug', 'updatedAt'],
     pagination: {
       start: 0,
       limit: sitemapSize,
@@ -43,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // categories
   const catRes = await fetchAPI<Catefory[]>('/categories', {
     sort: 'createdAt:DESC',
-    fields: 'slug,updatedAt',
+    fields: ['slug', 'updatedAt'],
     pagination: {
       start: 0,
       limit: sitemapSize,
