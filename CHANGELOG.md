@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/valuable-promo/frontend/compare/v1.11.0...v1.11.1) (2023-09-09)
+
+
+### Bug Fixes
+
+* error with new strapi version api ([31290a4](https://github.com/valuable-promo/frontend/commit/31290a4f3af2a387cc6c4569e16008e8316dc660))
+
 ## [1.11.0](https://github.com/valuable-promo/frontend/compare/v1.10.4...v1.11.0) (2023-09-02)
 
 
