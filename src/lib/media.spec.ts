@@ -1,11 +1,31 @@
 import { getStrapiMedia } from './media';
-import { getStrapiURL } from './hepler';
-jest.mock('./hepler');
+import { getStrapiURL } from '@/lib/hepler';
+jest.mock('@/lib/hepler');
 
 // Mock data for your tests
 const mockMedia = {
   attributes: {
     url: '/example.jpg',
+    width: 800,
+    height: 600,
+    formats: {
+      thumbnail: {
+        url: '/example-thumbnail.jpg',
+        width: 150,
+        height: 100,
+      },
+      large: {
+        url: 'http://external-site.com/example-large.jpg',
+        width: 1600,
+        height: 1200,
+      },
+    },
+  },
+};
+
+const mockMediaExternalURL = {
+  attributes: {
+    url: 'http://external-site.com/example.jpg',
     width: 800,
     height: 600,
     formats: {
@@ -50,5 +70,12 @@ describe('getStrapiMedia', () => {
     expect(result.url).toBe('http://external-site.com/example-large.jpg');
     expect(result.width).toBe(1600);
     expect(result.height).toBe(1200);
+  });
+
+  it('returns external URL as is when no format is specified', () => {
+    const result = getStrapiMedia(mockMediaExternalURL as any);
+    expect(result.url).toBe('http://external-site.com/example.jpg');
+    expect(result.width).toBe(800);
+    expect(result.height).toBe(600);
   });
 });
