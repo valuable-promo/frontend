@@ -13,3 +13,18 @@ jobs:
           node-version: 'lts/*'
       - run: npm ci
       - run: npm test
+  coverage:
+    needs: [test]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - run: npm ci
+      - uses: paambaati/codeclimate-action@v2.2.4
+        env:
+          CC_TEST_REPORTER_ID: ad69e8b04f0bd8ce7d898de5d51b8513cfb5a54307f91867d545d5480da1a8a7
+        with:
+          coverageCommand: npm run test:cov
