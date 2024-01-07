@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.2](https://github.com/valuable-promo/frontend/compare/v1.11.1...v1.11.2) (2024-01-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @heroicons/react to v2.1.1 ([#256](https://github.com/valuable-promo/frontend/issues/256)) ([51ed563](https://github.com/valuable-promo/frontend/commit/51ed56382f4a2997018395b805650b18f491dabc))
+* **deps:** update dependency moment to v2.30.1 ([#260](https://github.com/valuable-promo/frontend/issues/260)) ([fdfe5b9](https://github.com/valuable-promo/frontend/commit/fdfe5b9a525f91016d16a30e901c90aabd4f0cf0))
+* **deps:** update dependency react-markdown to v9 ([#204](https://github.com/valuable-promo/frontend/issues/204)) ([73c7919](https://github.com/valuable-promo/frontend/commit/73c79192756cdc12b896143e862ed613a84462f6))
+* **deps:** update dependency react-markdown to v9.0.1 ([#232](https://github.com/valuable-promo/frontend/issues/232)) ([8e49e5f](https://github.com/valuable-promo/frontend/commit/8e49e5fafded1163de59978433ce2e0bc20ef71e))
+* **deps:** update dependency sharp to v0.32.6 ([#193](https://github.com/valuable-promo/frontend/issues/193)) ([0b4795d](https://github.com/valuable-promo/frontend/commit/0b4795d5839990f335d958a11882ec29eee3e9e2))
+* **deps:** update dependency sharp to v0.33.1 ([#244](https://github.com/valuable-promo/frontend/issues/244)) ([3d846e6](https://github.com/valuable-promo/frontend/commit/3d846e62c687e57a7c6f36a13eb6e21fc5e3642d))
+
 ### [1.11.1](https://github.com/valuable-promo/frontend/compare/v1.11.0...v1.11.1) (2023-09-09)
 
 
