@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/valuable-promo/frontend/compare/v1.11.2...v1.12.0) (2024-03-29)
+
+
+### Features
+
+* adds Code Climate Test coverage ([05438fb](https://github.com/valuable-promo/frontend/commit/05438fbb61fcf7907aad31c7de79e3200d935cae))
+* adds tests ([0ff5f13](https://github.com/valuable-promo/frontend/commit/0ff5f13ed3575f0d14ff7e36c36af6c627f65152))
+* adds tests ([7daaa76](https://github.com/valuable-promo/frontend/commit/7daaa76f16b88a3489ff2c3e04d80d6e1f47e3c6))
+* improve testing ([a4bbb3e](https://github.com/valuable-promo/frontend/commit/a4bbb3e60626b4b765982ac2fd087924452d8bfd))
+* updates NextJS and TS ([6a16e1b](https://github.com/valuable-promo/frontend/commit/6a16e1bb48c4b0caf0aa81e28a6d90f428ff45d4))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @headlessui/react to v1.7.18 ([#271](https://github.com/valuable-promo/frontend/issues/271)) ([7bba267](https://github.com/valuable-promo/frontend/commit/7bba267f90bfd4de5a40a3eed41bcdc6576f2cdd))
+* **deps:** update dependency @heroicons/react to v2.1.3 ([#315](https://github.com/valuable-promo/frontend/issues/315)) ([d6ff7fe](https://github.com/valuable-promo/frontend/commit/d6ff7feee37ab0777d96416c835d410c9560ec2e))
+* **deps:** update dependency qs to v6.12.0 ([#302](https://github.com/valuable-promo/frontend/issues/302)) ([727094a](https://github.com/valuable-promo/frontend/commit/727094a926dbb449af6446191cdd93ab645dcb69))
+* **deps:** update dependency sharp to v0.33.2 ([#274](https://github.com/valuable-promo/frontend/issues/274)) ([5ff7221](https://github.com/valuable-promo/frontend/commit/5ff7221fdd11c011b6feae62a6a114960517d082))
+* **deps:** update dependency sharp to v0.33.3 ([#316](https://github.com/valuable-promo/frontend/issues/316)) ([8340452](https://github.com/valuable-promo/frontend/commit/8340452d586885f8e5105c5c0d9d32e01e93f278))
+
 ### [1.11.2](https://github.com/valuable-promo/frontend/compare/v1.11.1...v1.11.2) (2024-01-07)
 
 
