@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 'lts/*'
       - run: npm ci
-      - uses: paambaati/codeclimate-action@v5.0.0
+      - uses: paambaati/codeclimate-action@v7.0.0
         env:
           CC_TEST_REPORTER_ID: ad69e8b04f0bd8ce7d898de5d51b8513cfb5a54307f91867d545d5480da1a8a7
         with:
